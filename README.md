@@ -31,5 +31,25 @@ I am a dedicated cybersecurity professional with a multifaceted skill set encomp
       <td><a href="https://github.com/shaddy43/Position_Independent_Backdoor">Position Independent Backdoor</a></td>
       <td>This project contains methodology of creating position independent code that is used to extract shellcode from the generated binary. Position independent shellcode could be injected in any process for evading defenses and creating backdoors</td>
     </tr>
+    <tr>
+      <td><a href="https://github.com/shaddy43/ReverseShell_NC">Reverse Shell Netcat</a></td>
+      <td>This repository contains a program that gives remote shell connection on the sockets back to the c2 server. This connection can be listened on Netcat as well. It is just a PoC for getting reverse shells by sending input messages, that are commands (from c2) and getting back output messages that are outputs or errors of those commands</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/shaddy43/Donut_Injector">Donut Injector</a></td>
+      <td>This repo gives you an injector that tries to bypass static and dynamic analysis. The shellcodes that are injected must be encrypted with a key and decrypted at runtime to avoid detection</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/shaddy43/PocketEncryptor">Pocker Encrypter</a></td>
+      <td>My own personal pet project that i use for encrypting private files before saving them on hard drives or on cloud. This repo can encrypt and decrypt any type of file (videos, images, files, docs etc). The encryption and decryption process is based on a key passed as parameter. Encryption is CBC AES 256 bit</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/shaddy43/AES_Shellcode_Encryptor">AES Shellcode Encrypter</a></td>
+      <td>This repository contains a tool that can encrypt all type of files (bin, txt, sc) and give the encrypted output in the form of an encrypted shellcode. Process of encrypting shellcode is very important for injection processes to bypass signature based detection by the security controls</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/shaddy43/SGCApp">SGCApp (Secure Group Communication App)</a></td>
+      <td>This repository implements SEGCOM paper to achieve secure group communication in multi-casting</td>
+    </tr>
   </tbody>
 </table>
