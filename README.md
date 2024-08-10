@@ -86,5 +86,40 @@ I am a dedicated cybersecurity professional with a multifaceted skill set encomp
       <td>Technical Analysis of MedusaLocker Ransomware and its TTPs extracted</td>
       <td>Nov 13, 2023</td>
     </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-ssl-pinning-for-mobile-app-pen-testing-eeef2ce22682">RevEnge! Reverse Engineering android apps to bypass SSL pinning for mobile app pen-testing</a></td>
+      <td>Bypass SSL pinning manually by patching the APK file</td>
+      <td>Oct 31, 2023</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/secrets-of-commercial-rats-nanocore-dissected-69e1213b34c3">Secrets of commercial RATs! NanoCore dissected</a></td>
+      <td>Technical Analysis of NanoCore 1.2.2.0</td>
+      <td>Sep 21, 2023</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-root-detection-capabilities-for-mobile-e8466f0d3a7e">RevEnge! Reverse engineering android apps to bypass root detection capabilities for mobile app-pentesting</a></td>
+      <td>Bypassing Root Detection by reverse engineering APK and patching code</td>
+      <td>Nov 5, 2022</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/the-epitome-of-evasion-a-custom-shellcode-c751a1a17e5b">The epitome of evasion! A custom shellcode</a></td>
+      <td>Crafting a custom position independent code (shellcode) to evade defenses</td>
+      <td>Apr 9, 2022</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/reverse-authentication-how-i-diffused-infamous-bomb-exe-in-one-hour-52796cdac2e4">Reverse Authentication! How I diffused infamous bomb.exe in one hour</a></td>
+      <td>Completing famous bomb.exe, a reverse engineering exercise in one hour</td>
+      <td>Mar 23, 2022</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/cracked-haven-why-you-should-avoid-using-cracked-software-and-how-to-check-their-integrity-98a146efebb5">Cracked Haven! Why you should avoid using cracked software and how to check their integrity?</a></td>
+      <td>Cracking a software and adding a backdoor in it manually</td>
+      <td>Mar 12, 2022</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/analysis-of-a-trojanized-anydesk-2df3b30bf89d">Analysis of a trojanized anydesk</a></td>
+      <td>Technical analysis of a trojanized anydesk, delivering infostealer in anydesk campaign</td>
+      <td>Mar 1, 2022</td>
+    </tr>
   </tbody>
 </table>
