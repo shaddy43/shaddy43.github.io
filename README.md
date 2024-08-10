@@ -54,3 +54,37 @@ I am a dedicated cybersecurity professional with a multifaceted skill set encomp
     </tr>
   </tbody>
 </table>
+
+
+## Blogs
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921">Ghost in the system, Malware Defense Evasion</a></td>
+      <td>A list of interesting Malware Defense Evasion techniques. These techniques have been extracted from real-world malware samples. The list of evasion techniques is of very diverse nature, including very advance techniques as well as very basic but out-of-the-box craft</td>
+      <td>Aug 08, 2024</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/layers-of-deception-analyzing-the-complex-stages-of-xloader-4-3-malware-evolution-2dcb550b98d9">Layers of Deception: Analyzing the Complex Stages of XLoader 4.3 Malware Evolution</a></td>
+      <td>A highly technical article explaining the deceptive nature and highly complex crafted structure of Xloader 4.3/Formbook Infostealer</td>
+      <td>Jan 23, 2024</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/from-infection-to-encryption-tracing-the-impact-of-ryuk-ransomware-64bd8656781c">From Infection to Encryption: Tracing the Impact of RYUK Ransomware</a></td>
+      <td>Technical Analysis of highly dangerous multi-threading encrypter on which many of the modern ransomware are based on. Evolution of HERMES ransomware family</td>
+      <td>Nov 26, 2023</td>
+    </tr>
+    <tr>
+      <td><a href="https://medium.com/@shaddy43/decrypting-the-mystery-of-medusalocker-7128795cf9f0">Decrypting the Mystery of MedusaLocker</a></td>
+      <td>Technical Analysis of MedusaLocker Ransomware and its TTPs extracted</td>
+      <td>Nov 13, 2023</td>
+    </tr>
+  </tbody>
+</table>
