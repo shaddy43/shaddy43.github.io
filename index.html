@@ -1,0 +1,463 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+/* Container for cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px;
+}
+
+/* Individual card */
+.card {
+    background: #dbd7d7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Make the card 40% of the page width */
+    max-width: 600px; /* Optional: Set a max width to prevent the card from becoming too wide on large screens */
+    text-decoration: none;
+    color: #333;
+    font-family: 'Carter One', sans-serif;
+    display: flex;
+    flex-direction: row; /* Horizontal layout inside the card */
+    position: relative;
+}
+
+/* Card hover */
+.card:hover {
+    transform: scaleY(1.04);
+}
+
+/* Card image */
+.card img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Card content */
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Card title */
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Card description */
+.card-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Meta info */
+.card-meta {
+    font-size: 0.85em;
+    color: #777;
+}
+
+/* Ribbon */
+.card-ribbon {
+    position: absolute;
+    top: 15px;
+    left: -5px;
+    background: var(--ribbon, DodgerBlue);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    transform: rotate(-45deg);
+}
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Carter One', sans-serif;
+}
+
+#pagination-controls button, #pagination-controls span.page-number {
+    background: DodgerBlue;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#pagination-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+#pagination-controls span.page-number {
+    background: #f4f4f4;
+    color: #333;
+    cursor: default;
+}
+
+#pagination-controls button:hover:not(:disabled) {
+    background: #1e90ff;
+}
+
+/* CARD SQUARE DATA*/
+
+
+.card-container-square {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+}
+
+/* Square card */
+.card-square {
+    background: #dbd7d7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%; /* Make the card 40% of the page width */
+    max-width: 300px; /* Optional: Set a max width for square cards */
+    text-decoration: none;
+    color: #333;
+    font-family: 'Carter One', sans-serif;
+    display: flex;
+    flex-direction: column; /* Vertical layout inside the card */
+    position: relative;
+}
+
+/* Card image for square style */
+.card-square img {
+    width: 100%;
+    height: 200px; /* Adjust based on the desired size */
+    object-fit: cover;
+}
+
+/* Card content for square style */
+.card-square .card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* Card title and description for square style */
+.card-square .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-square .card-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Meta info for square style */
+.card-square .card-meta {
+    font-size: 0.85em;
+    color: #777;
+}
+
+/* Ribbon for square style */
+.card-square .card-ribbon {
+    position: absolute;
+    top: 15px;
+    left: -5px;
+    background: var(--ribbon, DodgerBlue);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    transform: rotate(-45deg);
+}
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+</head>
+
+<body>
+    <!--<div align="center">
+        <img width="400px" src="Assets/Mal_AI3.jpeg" alt="Malware Analysis Series" />
+        <h1>Intro</h1>
+        <br />
+    </div>-->
+
+    <p>I am a dedicated cybersecurity professional with a multifaceted skill set encompassing <b>Threat Research, Detection Engineering and Malware Development</b>. My expertise lies in understanding and mitigating complex security threats through comprehensive analysis, innovative detection mechanisms, and effective response strategies. Additionally, I also develop malware for security testing and evaluation.
+    </p>
+
+    <h2>Whoami</h2>
+    <table style="border-collapse: collapse; border: none;">
+        <tr style="border: none;">
+            <td style="vertical-align: top; border: none;">
+                <img src="Assets/modern_ida101.GIF" alt="Small Image" width="100" height="100" style="margin-right: 00px;">
+            </td>
+            <td style="vertical-align: top; border: none;">
+                <p><a href="https://www.linkedin.com/in/shayan-ahmed-khan-517168120/">Shayan Ahmed Khan</a> <br> Alias: shaddy43 <br> Threat Researcher, Detection Engineer, MalDev <br> <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/92d6bb32e0ae540e">SC-200</a>, <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/c4fac587e902016b">AZ-500</a>, <a href="https://www.credential.net/ff7a6f07-4c09-4d96-ab14-261b0d3f473a#gs.9t6ecb">PJMR</a>, HCIA Security <br> I believe in <a href="https://medium.com/@shaddy43">open-source</a> work & contributions!</p>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Recent Posts</h2>
+    <div id="pagination-container">
+        <div class="card-container" id="card-container">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+        <div id="pagination-controls">
+            <button id="prev-btn">Previous</button>
+            <span id="page-number" class="page-number"></span>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="card-container-square">
+        <a href="https://shaddy43.github.io/MalwareAnalysisSeries/" class="card card-square">
+            <div class="card card-square">
+                <img src="https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Assets/Mal_AI2.JPG?raw=true" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">MalwareAnalysisSeries</h2>
+                    <p class="card-description">This repository contains the analysis reports, technical details or any tools created for analyzing a piece of malware sample. Additionally, the repo also contains interesting TTPs extracted and recreated from malware samples for security testing, along with their Detection Rules</p>
+                    <div class="card-meta">Last commit: 20 Aug 2024</div>
+                    <div class="card-ribbon">Latest</div>
+                </div>
+            </div>
+        </a>
+        
+        <a href="https://github.com/shaddy43/Position_Independent_Backdoor" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen3.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Position Independent Backdoor</h2>
+                    <p class="card-description">This project contains methodology of creating position independent code which can be used to extract shellcode from the generated binary. Shellcode could be injected in any process for evading defenses</p>
+                    <div class="card-meta">Last commit: 14 Apr 2022</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/shaddy43/ReverseShell_NC" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen6.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Reverse Shell Netcat</h2>
+                    <p class="card-description">This repository contains a program that gives remote shell connection on the sockets back to the c2 server. This connection can be listened on Netcat as well</p>
+                    <div class="card-meta">Last commit: 16 Apr 2022</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/shaddy43/Donut_Injector" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen7.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Donut Injector</h2>
+                    <p class="card-description">An injector that tries to bypass static and dynamic analysis. The shellcodes that are injected must be encrypted with a key and decrypted at runtime to avoid detection</p>
+                    <div class="card-meta">Last commit: 14 Mar 2022</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/shaddy43/PocketEncryptor" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen8.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">Pocket Encrypter</h2>
+                    <p class="card-description">A light-weight Pocket encrypter using CBC AES 256 for encrypting files with password being passed as a parameter</p>
+                    <div class="card-meta">Last commit: 02 Oct 2022</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/shaddy43/AES_Shellcode_Encryptor" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen9.jpeg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">AES Shellcode Encrypter</h2>
+                    <p class="card-description">A tool that can encrypt all type of files and give the encrypted output in the form of an encrypted shellcode</p>
+                    <div class="card-meta">Last commit: 21 Dec 2021</div>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://github.com/shaddy43/SGCApp" class="card card-square">
+            <div class="card card-square">
+                <img src="Assets/ai_gen10.jpg" alt="Card Image">
+                <div class="card-content">
+                    <h2 class="card-title">SGCApp: Secure Group Communication</h2>
+                    <p class="card-description">This repository implements SEGCOM paper to achieve secure group communication in multi-casting</p>
+                    <div class="card-meta">Last commit: 15 May 2019</div>
+                    <div class="card-ribbon">Archived</div>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+
+    <!-- Pagination controls -->
+<div id="pagination-controls"></div>
+
+<script>
+    const cards = [
+    // Example cards data
+
+    {
+        title: 'Ghost in the system, Malware Defense Evasion',
+        description: 'A list of interesting Malware Defense Evasion techniques',
+        imgSrc: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*pp9__hydqMi5AkKbJy-W8w.jpeg',
+        meta: '08 Aug 2024 • 6 minute read',
+        ribbon: 'Latest',
+        link: 'https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921'
+    },
+    {
+        title: 'Layers of Deception: Analyzing the Complex Stages of XLoader 4.3 Malware Evolution',
+        description: 'Technical Analysis of xloader4.3/formbook infostealer',
+        imgSrc: 'https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Xloader4.3/Assets/Xloader.jpg?raw=true',
+        meta: '24 Jan 2024 • 25 minute read',
+        ribbon: 'Featured',
+        link: 'https://medium.com/@shaddy43/layers-of-deception-analyzing-the-complex-stages-of-xloader-4-3-malware-evolution-2dcb550b98d9'
+    },
+    {
+        title: 'From Infection to Encryption: Tracing the Impact of RYUK Ransomware',
+        description: 'Technical Analysis of dangerous multi-threading encrypter on which many of the modern ransomware are based on',
+        imgSrc: 'https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Ryuk/Assets/Ryuk_Ai.jpg?raw=true',
+        meta: '26 Nov 2023 • 10 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/from-infection-to-encryption-tracing-the-impact-of-ryuk-ransomware-64bd8656781c'
+    },
+    {
+        title: 'Decrypting the Mystery of MedusaLocker',
+        description: 'Technical Analysis of MedusaLocker Ransomware and its extracted TTPs',
+        imgSrc: 'https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/MedusaLocker/Assets/Medusa.png?raw=true',
+        meta: '13 Nov 2023 • 9 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/decrypting-the-mystery-of-medusalocker-7128795cf9f0'
+    },
+    {
+        title: 'RevEnge! Reverse Engineering android apps to bypass SSL pinning for mobile app pen-testing',
+        description: 'Bypass SSL pinning manually by patching the APK file for MITM proxy and API testing',
+        imgSrc: 'Assets/ai_gen5.jpg',
+        meta: '31 Oct 2023 • 5 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-ssl-pinning-for-mobile-app-pen-testing-eeef2ce22682'
+    },
+    {
+        title: 'Secrets of commercial RATs! NanoCore dissected',
+        description: 'Technical analysis of NanoCore RAT 1.2.2.0 malware and its extracted TTPs',
+        imgSrc: 'https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/NanoCore1.2.2.0/Assets/RAT.png?raw=true',
+        meta: '21 Sep 2023 • 14 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/secrets-of-commercial-rats-nanocore-dissected-69e1213b34c3'
+    },
+    {
+        title: 'RevEnge! Reverse engineering android apps to bypass root detection capabilities for mobile app-pentesting',
+        description: 'Bypassing Root Detection by reverse engineering APK and patching code',
+        imgSrc: 'Assets/ai_gen4.jpg',
+        meta: '05 Nov 2022 • 6 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-root-detection-capabilities-for-mobile-e8466f0d3a7e'
+    },
+    {
+        title: 'The epitome of evasion! A custom shellcode',
+        description: 'Crafting a custom position independent code (shellcode) to evade defenses',
+        imgSrc: 'Assets/ai_gen3.jpg',
+        meta: '09 Apr 2022 • 8 minute read',
+        ribbon: 'Evasion',
+        link: 'https://medium.com/@shaddy43/the-epitome-of-evasion-a-custom-shellcode-c751a1a17e5b'
+    },
+    {
+        title: 'Reverse Auth',
+        description: 'Reversing Authenticaion. Completing famous bomb.exe, a reverse engineering exercise to reverse engineer and bypass authentication checks in one hour',
+        imgSrc: 'Assets/ai_gen2.jpg',
+        meta: '23 Mar 2022 • 7 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/reverse-authentication-how-i-diffused-infamous-bomb-exe-in-one-hour-52796cdac2e4'
+    },
+    {
+        title: 'Cracked Haven',
+        description: 'Understand software cracking and its implications. This article explores the way software cracking works with a practical example of cracking Adobe Photoshop and manually adding backdoor',
+        imgSrc: 'https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/CrackedHaven/Assets/RevEnge_Ai.jpg?raw=true',
+        meta: '12 Mar 2022 • 10 minute read',
+        ribbon: 'Featured',
+        link: 'https://medium.com/@shaddy43/cracked-haven-why-you-should-avoid-using-cracked-software-and-how-to-check-their-integrity-98a146efebb5'
+    },
+    {
+        title: 'Analysis of a trojanized anydesk',
+        description: 'Technical analysis of a trojanized anydesk, delivering infostealer in anydesk campaign',
+        imgSrc: 'Assets/ai_gen1.jpg',
+        meta: '01 Mar 2022 • 10 minute read',
+        ribbon: '',
+        link: 'https://medium.com/@shaddy43/analysis-of-a-trojanized-anydesk-2df3b30bf89d'
+    }
+    
+    // Add more card data here...
+];
+
+const cardsPerPage = 5;
+let currentPage = 1;
+
+function renderCards(page) {
+    const container = document.getElementById('card-container');
+    container.innerHTML = '';
+
+    const startIndex = (page - 1) * cardsPerPage;
+    const endIndex = Math.min(startIndex + cardsPerPage, cards.length);
+    
+    for (let i = startIndex; i < endIndex; i++) {
+        const cardData = cards[i];
+        
+        const card = document.createElement('a');
+        card.className = 'card';
+        card.href = cardData.link;
+        card.innerHTML = `
+            <img src="${cardData.imgSrc}" alt="Temp Image">
+            <div class="card-content">
+                <h2 class="card-title" style="color: black;">${cardData.title}</h2>
+                <p class="card-description">${cardData.description}</p>
+                <p class="card-meta">${cardData.meta}</p>
+            </div>
+            ${cardData.ribbon ? `<div class="card-ribbon">${cardData.ribbon}</div>` : ''}
+        `;
+        container.appendChild(card);
+    }
+
+    document.getElementById('page-number').textContent = `${page} / ${Math.ceil(cards.length / cardsPerPage)}`;
+    document.getElementById('prev-btn').disabled = page === 1;
+    document.getElementById('next-btn').disabled = page === Math.ceil(cards.length / cardsPerPage);
+}
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+    if (currentPage > 1) {
+        currentPage--;
+        renderCards(currentPage);
+    }
+});
+
+document.getElementById('next-btn').addEventListener('click', () => {
+    if (currentPage < Math.ceil(cards.length / cardsPerPage)) {
+        currentPage++;
+        renderCards(currentPage);
+    }
+});
+
+// Initial render
+renderCards(currentPage);
+
+</script>
+
+</body>
+</html>
