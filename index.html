@@ -31,9 +31,13 @@ layout: default
     position: relative;
 }
 
-/* Card hover */
 .card:hover {
     transform: scaleY(1.04);
+}
+
+/* Card hover */
+.card:hover .card-ribbon {
+    opacity: 1;
 }
 
 /* Card image */
@@ -77,7 +81,8 @@ layout: default
     padding: 5px 10px;
     font-size: 0.85em;
     font-weight: bold;
-    transform: rotate(-45deg);
+    opacity: 0;
+    /*transform: rotate(-45deg);*/
 }
 
 #pagination-controls {
@@ -141,6 +146,14 @@ layout: default
     position: relative;
 }
 
+.card-square:hover {
+    transform: scaleY(1.04);
+}
+
+.card-square:hover .card-ribbon {
+    opacity: 1;
+}
+
 /* Card image for square style */
 .card-square img {
     width: 100%;
@@ -181,7 +194,8 @@ layout: default
     padding: 5px 10px;
     font-size: 0.85em;
     font-weight: bold;
-    transform: rotate(-45deg);
+    opacity: 0;
+    /*transform: rotate(-45deg);*/
 }
 
 /* Square card pagination controls */
@@ -244,7 +258,7 @@ layout: default
                 <img src="Assets/modern_ida101.GIF" alt="Small Image" width="100" height="100" style="margin-right: 00px;">
             </td>
             <td style="vertical-align: top; border: none;">
-                <p><a href="https://www.linkedin.com/in/shayan-ahmed-khan-517168120/">Shayan Ahmed Khan</a> <br> Alias: shaddy43 <br> Threat Researcher, Detection Engineer, MalDev <br> <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/92d6bb32e0ae540e">SC-200</a>, <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/c4fac587e902016b">AZ-500</a>, <a href="https://www.credential.net/ff7a6f07-4c09-4d96-ab14-261b0d3f473a#gs.9t6ecb">PJMR</a>, HCIA Security <br> I believe in <a href="https://medium.com/@shaddy43">open-source</a> work & contributions!</p>
+                <p><a href="https://www.linkedin.com/in/shayan-ahmed-khan-517168120/" target="_blank">Shayan Ahmed Khan</a> <br> Alias: shaddy43 <br> Threat Researcher, Detection Engineer, MalDev <br> <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/92d6bb32e0ae540e" target="_blank">SC-200</a>, <a href="https://learn.microsoft.com/en-gb/users/shayanahmedkhan-2672/credentials/c4fac587e902016b" target="_blank">AZ-500</a>, <a href="https://www.credential.net/ff7a6f07-4c09-4d96-ab14-261b0d3f473a#gs.9t6ecb" target="_blank">PJMR</a>, HCIA Security <br> I believe in <a href="https://medium.com/@shaddy43" target="_blank">open-source</a> work & contributions!</p>
             </td>
         </tr>
     </table>
@@ -389,6 +403,7 @@ function renderCards(page) {
         const card = document.createElement('a');
         card.className = 'card';
         card.href = cardData.link;
+        card.target = '_blank';
         card.innerHTML = `
             <img src="${cardData.imgSrc}" alt="Temp Image">
             <div class="card-content">
@@ -502,6 +517,7 @@ const squareCards = [
                 const card = document.createElement('a');
                 card.className = 'card-square';
                 card.href = cardData.link;
+                card.target = '_blank';
                 card.innerHTML = `
                     <img src="${cardData.imgSrc}" alt="Temp Image">
                     <div class="card-content">
