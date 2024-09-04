@@ -24,6 +24,11 @@ I am a dedicated cybersecurity professional with a multifaceted skill set encomp
   </thead>
   <tbody>
     <tr>
+      <td><a href="https://github.com/shaddy43/BrowserSnatch">BrowserSnatch</a>
+      Latest - Ongoing</td>
+      <td>This project steals important data from all chromium and gecko browsers installed in the system and gather the data in a stealer db to be exfiltrated out</td>
+    </tr>
+    <tr>
       <td><a href="https://shaddy43.github.io/MalwareAnalysisSeries/">MalwareAnalysisSeries</a>
       Latest - Ongoing</td>
       <td>This repository contains the analysis reports, technical details or any tools created for analyzing a piece of malware sample. Additionally, the repo also contains interesting TTPs extracted and recreated from malware samples for security testing, along with their detection Rules</td>
