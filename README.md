@@ -72,6 +72,11 @@ I am a dedicated cybersecurity professional with a multifaceted skill set encomp
   </thead>
   <tbody>
     <tr>
+      <td><a href="https://medium.com/@shaddy43/velociraptor-the-ultimate-powerhouse-for-swift-and-precision-investigations-b9f7d85c5dfd">Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations</a></td>
+      <td>An article on the power of velociraptor as an open-source tool and its flexibility covering almost all aspects of security operations.</td>
+      <td>Jan 18, 2025</td>
+    </tr>
+    <tr>
       <td><a href="https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921">Ghost in the system, Malware Defense Evasion</a></td>
       <td>A list of interesting Malware Defense Evasion techniques. These techniques have been extracted from real-world malware samples. The list of evasion techniques is of very diverse nature, including very advance techniques as well as very basic but out-of-the-box craft</td>
       <td>Aug 08, 2024</td>
