@@ -1,0 +1,169 @@
+/* ---- Whoami section ---- */
+.whoami {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.whoami img {
+    flex-shrink: 0;
+}
+
+/* ---- Shared card pieces ---- */
+.card,
+.card-square {
+    background: #dbd7d7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Carter One', sans-serif;
+    display: flex;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card-square:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-ribbon,
+.card-square:hover .card-ribbon {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.card-meta {
+    font-size: 0.85em;
+    color: #777;
+}
+
+.card-ribbon {
+    position: absolute;
+    top: 15px;
+    left: -5px;
+    background: var(--ribbon, DodgerBlue);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    opacity: 0;
+}
+
+/* ---- Horizontal post cards ---- */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    max-width: 600px;
+    flex-direction: row;
+}
+
+.card img {
+    min-width: 30%;
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Stack post cards vertically on small screens */
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card img {
+        min-width: 100%;
+        max-width: 100%;
+        height: 180px;
+    }
+}
+
+/* ---- Square project cards ---- */
+.card-container-square {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-square {
+    max-width: 300px;
+    flex-direction: column;
+}
+
+.card-square:hover {
+    transform: translateY(-3px);
+}
+
+.card-square img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ---- Pagination controls ---- */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'Carter One', sans-serif;
+}
+
+.pagination-controls button,
+.pagination-controls span.page-number {
+    background: DodgerBlue;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls span.page-number {
+    background: #f4f4f4;
+    color: #333;
+    cursor: default;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background: #1e90ff;
+}
+
+/* Pagination is driven by JS: controls ship with the `hidden` attribute and
+   are revealed on init, so without JS all cards simply show at once. */
+.pagination-controls[hidden] {
+    display: none;
+}
