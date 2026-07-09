@@ -31,7 +31,7 @@
         var titleEl = card.querySelector('.card-title');
         var title = titleEl ? titleEl.textContent.trim() : card.href;
         var kind = card.closest('#projects') ? 'project' : 'post';
-        trackEvent('outbound-' + kind + '-' + slugify(title), card.href);
+        trackEvent('Portfolio-outbound-' + kind + '-' + slugify(title), card.href);
     }
 
     document.addEventListener('click', handleCardClick);
