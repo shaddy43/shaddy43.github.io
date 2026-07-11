@@ -23,9 +23,17 @@
         }
     }
 
-    function handleCardClick(e) {
+    function handleClick(e) {
         // auxclick covers middle-click (open in new tab); ignore right-click
         if (e.type === 'auxclick' && e.button !== 1) return;
+
+        // Social/support badges carry an explicit event name in data-event.
+        var badge = e.target.closest('a.social-badge[data-event]');
+        if (badge) {
+            trackEvent(badge.getAttribute('data-event'), badge.href);
+            return;
+        }
+
         var card = e.target.closest('a.card, a.card-square');
         if (!card) return;
         var titleEl = card.querySelector('.card-title');
@@ -34,6 +42,6 @@
         trackEvent('Portfolio-outbound-' + kind + '-' + slugify(title), card.href);
     }
 
-    document.addEventListener('click', handleCardClick);
-    document.addEventListener('auxclick', handleCardClick);
+    document.addEventListener('click', handleClick);
+    document.addEventListener('auxclick', handleClick);
 })();
