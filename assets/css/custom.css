@@ -167,3 +167,55 @@
 .pagination-controls[hidden] {
     display: none;
 }
+
+/* ---- Social / support badges (shields.io style) ---- */
+.badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.social-badge {
+    display: inline-flex;
+    align-items: stretch;
+    height: 28px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 0.78em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+}
+
+.social-badge .badge-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 9px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.social-badge .badge-text {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: #555;
+    color: #fff;
+}
+
+.social-badge svg {
+    width: 14px;
+    height: 14px;
+    fill: #fff;
+}
+
+.social-badge.b-github .badge-icon { background: #24292f; }
+.social-badge.b-medium .badge-icon { background: #000; }
+.social-badge.b-coffee .badge-icon { background: #0070ba; }
