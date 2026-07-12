@@ -27,8 +27,9 @@
         // auxclick covers middle-click (open in new tab); ignore right-click
         if (e.type === 'auxclick' && e.button !== 1) return;
 
-        // Social/support badges carry an explicit event name in data-event.
-        var badge = e.target.closest('a.social-badge[data-event]');
+        // Social badges and certification badges carry an explicit event
+        // name in data-event.
+        var badge = e.target.closest('a[data-event]');
         if (badge) {
             trackEvent(badge.getAttribute('data-event'), badge.href);
             return;

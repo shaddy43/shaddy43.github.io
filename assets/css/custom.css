@@ -218,4 +218,46 @@
 
 .social-badge.b-github .badge-icon { background: #24292f; }
 .social-badge.b-medium .badge-icon { background: #000; }
+.social-badge.b-linkedin .badge-icon { background: #0a66c2; }
 .social-badge.b-coffee .badge-icon { background: #0070ba; }
+
+/* ---- Certification badges (shields.io style, text/text) ---- */
+.cert-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.cert-badge {
+    display: inline-flex;
+    align-items: stretch;
+    height: 30px;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 0.8em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.cert-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
+}
+
+.cert-badge .cert-key {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.cert-badge .cert-val {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: #555;
+    color: #fff;
+}
