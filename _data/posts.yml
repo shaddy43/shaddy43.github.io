@@ -2,14 +2,14 @@
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
 - title: "Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations"
   description: "A deep dive into an open-source DFIR tool and its flexibility"
-  image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*dMM2LHskWPHicw7XH337KA.jpeg"
+  image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*dMM2LHskWPHicw7XH337KA.jpeg"
   meta: "18 Jan 2025 • 06 minute read"
   ribbon: "Latest"
   link: "https://medium.com/@shaddy43/velociraptor-the-ultimate-powerhouse-for-swift-and-precision-investigations-b9f7d85c5dfd"
 
 - title: "Emotet Malware Analysis"
   description: "A detailed technical analysis report on Emotet Malware covering 3 stages from initial vbs dropper to stage 2 emotet dll and in-memory loaded module"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Emotet/Assets/emotet.jpg?raw=true"
+  image: "/Assets/emotet.jpg"
   meta: "28 Oct 2024 • 12 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Emotet/"
 
@@ -27,26 +27,26 @@
 
 - title: "Ghost in the system, Malware Defense Evasion"
   description: "A list of interesting Malware Defense Evasion techniques"
-  image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*pp9__hydqMi5AkKbJy-W8w.jpeg"
+  image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*pp9__hydqMi5AkKbJy-W8w.jpeg"
   meta: "08 Aug 2024 • 6 minute read"
   link: "https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921"
 
 - title: "Layers of Deception: Analyzing the Complex Stages of XLoader 4.3 Malware Evolution"
   description: "Technical Analysis of xloader4.3/formbook infostealer"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Xloader4.3/Assets/Xloader.jpg?raw=true"
+  image: "/Assets/xloader.jpg"
   meta: "24 Jan 2024 • 25 minute read"
   ribbon: "Featured"
   link: "https://medium.com/@shaddy43/layers-of-deception-analyzing-the-complex-stages-of-xloader-4-3-malware-evolution-2dcb550b98d9"
 
 - title: "From Infection to Encryption: Tracing the Impact of RYUK Ransomware"
   description: "Technical Analysis of dangerous multi-threading encrypter on which many of the modern ransomware are based on"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Ryuk/Assets/Ryuk_Ai.jpg?raw=true"
+  image: "/Assets/ryuk.jpg"
   meta: "26 Nov 2023 • 10 minute read"
   link: "https://medium.com/@shaddy43/from-infection-to-encryption-tracing-the-impact-of-ryuk-ransomware-64bd8656781c"
 
 - title: "Decrypting the Mystery of MedusaLocker"
   description: "Technical Analysis of MedusaLocker Ransomware and its extracted TTPs"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/MedusaLocker/Assets/Medusa.png?raw=true"
+  image: "/Assets/medusa.jpg"
   meta: "13 Nov 2023 • 9 minute read"
   link: "https://medium.com/@shaddy43/decrypting-the-mystery-of-medusalocker-7128795cf9f0"
 
@@ -58,7 +58,7 @@
 
 - title: "Secrets of commercial RATs! NanoCore dissected"
   description: "Technical analysis of NanoCore RAT 1.2.2.0 malware and its extracted TTPs"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/NanoCore1.2.2.0/Assets/RAT.png?raw=true"
+  image: "/Assets/nanocore.jpg"
   meta: "21 Sep 2023 • 14 minute read"
   link: "https://medium.com/@shaddy43/secrets-of-commercial-rats-nanocore-dissected-69e1213b34c3"
 
@@ -83,7 +83,7 @@
 
 - title: "Cracked Haven"
   description: "Understand software cracking and its implications. This article explores the way software cracking works with a practical example of cracking Adobe Photoshop and manually adding backdoor"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/CrackedHaven/Assets/RevEnge_Ai.jpg?raw=true"
+  image: "/Assets/crackedhaven.jpg"
   meta: "12 Mar 2022 • 10 minute read"
   ribbon: "Featured"
   link: "https://medium.com/@shaddy43/cracked-haven-why-you-should-avoid-using-cracked-software-and-how-to-check-their-integrity-98a146efebb5"

@@ -2,14 +2,14 @@
 # To add a project, copy a block and fill in the fields. `ribbon` and `meta2` are optional.
 - title: "BrowserSnatch"
   description: "This project steals important data from all chromium and gecko browsers installed in the system and gather the data in a stealer db to be exfiltrated out"
-  image: "https://github.com/shaddy43/BrowserSnatch/blob/master/Assets/browser_snatch1.jpg?raw=true"
+  image: "/Assets/browsersnatch.jpg"
   meta: "Stars &#9734;: 250+, Forks: 40+"
   ribbon: "Latest"
   link: "https://github.com/shaddy43/BrowserSnatch"
 
 - title: "MalwareAnalysisSeries"
   description: "This repository contains the analysis reports, technical details or any tools created for analyzing a piece of malware sample. Additionally, the repo also contains interesting TTPs extracted and recreated from malware samples with detection rules"
-  image: "https://github.com/shaddy43/MalwareAnalysisSeries/blob/main/Assets/Mal_AI2.JPG?raw=true"
+  image: "/Assets/malseries.jpg"
   meta: "Stars &#9734;: 14+"
   ribbon: "Featured"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/"
