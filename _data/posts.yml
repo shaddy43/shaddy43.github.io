@@ -2,7 +2,7 @@
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
 - title: "Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations"
   description: "A deep dive into an open-source DFIR tool and its flexibility"
-  image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*dMM2LHskWPHicw7XH337KA.jpeg"
+  image: "/Assets/ai_gen13.jpg"
   meta: "18 Jan 2025 • 06 minute read"
   ribbon: "Latest"
   link: "https://medium.com/@shaddy43/velociraptor-the-ultimate-powerhouse-for-swift-and-precision-investigations-b9f7d85c5dfd"
@@ -27,7 +27,7 @@
 
 - title: "Ghost in the system, Malware Defense Evasion"
   description: "A list of interesting Malware Defense Evasion techniques"
-  image: "https://miro.medium.com/v2/resize:fit:640/format:webp/1*pp9__hydqMi5AkKbJy-W8w.jpeg"
+  image: "/Assets/ai_gen14.jpg"
   meta: "08 Aug 2024 • 6 minute read"
   link: "https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921"
 
