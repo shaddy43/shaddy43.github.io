@@ -33,7 +33,7 @@ description: Threat Researcher | Detection & Response Engineer | MalDev
     <div class="card-container">
         {% for post in site.data.posts %}
         <a class="card" href="{{ post.link }}" target="_blank" rel="noopener">
-            <img src="{{ post.image }}" alt="Cover image for {{ post.title }}" loading="lazy">
+            <img src="{{ post.image }}" alt="Cover image for {{ post.title }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
             <div class="card-content">
                 <h3 class="card-title">{{ post.title }}</h3>
                 <p class="card-description">{{ post.description }}</p>
@@ -55,7 +55,7 @@ description: Threat Researcher | Detection & Response Engineer | MalDev
     <div class="card-container-square">
         {% for project in site.data.projects %}
         <a class="card-square" href="{{ project.link }}" target="_blank" rel="noopener">
-            <img src="{{ project.image }}" alt="Cover image for {{ project.title }}" loading="lazy">
+            <img src="{{ project.image }}" alt="Cover image for {{ project.title }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
             <div class="card-content">
                 <h3 class="card-title">{{ project.title }}</h3>
                 <p class="card-description">{{ project.description }}</p>
