@@ -4,7 +4,7 @@ function initPagination(sectionId, cardsPerPage) {
     const section = document.getElementById(sectionId);
     if (!section) return;
 
-    const container = section.querySelector('.card-container, .card-container-square');
+    const container = section.querySelector('.card-container, .card-container-square, .repo-grid');
     const controls = section.querySelector('.pagination-controls');
     const prevBtn = controls.querySelector('.prev-btn');
     const nextBtn = controls.querySelector('.next-btn');
@@ -44,4 +44,4 @@ function initPagination(sectionId, cardsPerPage) {
 }
 
 initPagination('recent-posts', 3);
-initPagination('projects', 2);
+initPagination('projects', 4);
