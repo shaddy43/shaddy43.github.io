@@ -35,9 +35,10 @@
             return;
         }
 
-        var card = e.target.closest('a.card, a.card-square');
+        // Post cards (a.card) and project repo cards (a.repo).
+        var card = e.target.closest('a.card, a.card-square, a.repo');
         if (!card) return;
-        var titleEl = card.querySelector('.card-title');
+        var titleEl = card.querySelector('.card-title, .repo-name');
         var title = titleEl ? titleEl.textContent.trim() : card.href;
         var kind = card.closest('#projects') ? 'project' : 'post';
         trackEvent('Portfolio-outbound-' + kind + '-' + slugify(title), card.href);
