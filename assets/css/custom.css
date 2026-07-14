@@ -1,3 +1,8 @@
+/* Never underline links on hover */
+a:hover {
+    text-decoration: none;
+}
+
 /* ---- Whoami section ---- */
 .whoami {
     display: flex;
@@ -28,7 +33,9 @@
 .card:hover,
 .card-square:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* soft drop shadow + a golden ring highlight (ring drawn via box-shadow
+       so it doesn't shift layout the way a real border would) */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px #d9a520;
 }
 
 .card:hover .card-ribbon,
@@ -241,7 +248,7 @@
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-a.cert-badge:hover {
+.cert-badge:hover {
     transform: translateY(-1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.22);
 }
