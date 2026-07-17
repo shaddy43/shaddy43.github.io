@@ -1,10 +1,16 @@
 # Blog posts and analysis reports, newest first.
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
+- title: "BrowserSnatch: Detection & Threat Intelligence Wiki"
+  description: "A community detection knowledge base for BrowserSnatch, an open-source browser data extraction tool"
+  image: "/Assets/browsersnatch.jpg"
+  meta: "17 Jul 2026 • 20 minute read"
+  ribbon: "Latest"
+  link: "https://github.com/shaddy43/BrowserSnatch/wiki"
+
 - title: "Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations"
   description: "A deep dive into an open-source DFIR tool and its flexibility"
   image: "/Assets/ai_gen13.jpg"
   meta: "18 Jan 2025 • 06 minute read"
-  ribbon: "Latest"
   link: "https://medium.com/@shaddy43/velociraptor-the-ultimate-powerhouse-for-swift-and-precision-investigations-b9f7d85c5dfd"
 
 - title: "Emotet Malware Analysis"
