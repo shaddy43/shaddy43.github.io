@@ -3,44 +3,44 @@
 # (assets/js/github-stats.js). Maintain title, description, tags, ribbon, link.
 # `ribbon` is optional: "Latest" (blue), "Featured" (gold), "Archived" (grey).
 - title: "BrowserSnatch"
-  description: "This project steals important data from all chromium and gecko browsers installed in the system and gather the data in a stealer db to be exfiltrated out"
-  tags: [infostealer, windows, maldev]
+  description: "BrowserSnatch is an offensive-security research tool that extracts and decrypts sensitive data from web browsers"
+  tags: [infostealer, windows, browsersnatch]
   ribbon: "Latest"
   link: "https://github.com/shaddy43/BrowserSnatch"
 
 - title: "MalwareAnalysisSeries"
-  description: "This repository contains the analysis reports, technical details or any tools created for analyzing a piece of malware sample. Additionally, the repo also contains interesting TTPs extracted and recreated from malware samples with detection rules"
+  description: "Deep technical malware analysis reports, RE tools, unpacked stages, and recreated TTPs with detections for infamous malware families"
   tags: [reversing, dfir, cracking]
   ribbon: "Featured"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/"
 
 - title: "Position Independent Backdoor"
-  description: "This project contains methodology of creating position independent code which can be used to extract shellcode from the generated binary. Shellcode could be injected in any process for evading defenses"
-  tags: [shellcode, evasion]
+  description: "Complete methodology of creating custom shellcodes for injection and evasion"
+  tags: [shellcode, evasion, injection, backdoor]
   link: "https://github.com/shaddy43/Position_Independent_Backdoor"
 
 - title: "Reverse Shell Netcat"
-  description: "This repository contains a program that gives remote shell connection on the sockets back to the c2 server. This connection can be listened on Netcat as well"
-  tags: [c2, redteam]
+  description: "Simple PoC that gives remote shell connection on the sockets back to the c2 server (custom or netcat)"
+  tags: [c2, redteam, backdoor]
   link: "https://github.com/shaddy43/ReverseShell_NC"
 
 - title: "Donut Injector"
-  description: "An injector that tries to bypass static and dynamic analysis. The shellcodes that are injected must be encrypted with a key and decrypted at runtime to avoid detection"
+  description: "Injector that evades defenses with encrypted shellcode"
   tags: [injector, evasion]
   link: "https://github.com/shaddy43/Donut_Injector"
 
 - title: "Pocket Encrypter"
-  description: "A light-weight Pocket encrypter using CBC AES 256 for encrypting files with password being passed as a parameter"
-  tags: [crypto, aes]
+  description: "Personal encryptor used to encrypt individual or recursive files based on prompted passphrase."
+  tags: [crypto, aes-256-gcm, secure]
   link: "https://github.com/shaddy43/PocketEncryptor"
 
 - title: "AES Shellcode Encrypter"
-  description: "A tool that can encrypt all type of files and give the encrypted output in the form of an encrypted shellcode"
-  tags: [shellcode, aes]
+  description: "A tool to read and encrypt shellcode (.bin) and display encrypted bytes as output to be copied in Injectors for evasion"
+  tags: [shellcode, aes, evasion]
   link: "https://github.com/shaddy43/AES_Shellcode_Encryptor"
 
 - title: "SGCApp: Secure Group Communication"
   description: "This repository implements SEGCOM paper to achieve secure group communication in multi-casting"
-  tags: [security, networking, media]
+  tags: [security, networking, social-media, crypto]
   ribbon: "Archived"
   link: "https://github.com/shaddy43/SGCApp"
