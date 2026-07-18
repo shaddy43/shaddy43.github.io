@@ -6,12 +6,91 @@ a:hover {
 /* ---- Whoami section ---- */
 .whoami {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: stretch;
+    gap: 18px;
 }
 
 .whoami img {
     flex-shrink: 0;
+}
+
+/* avatar keeps a fixed width but stretches its height to match the
+   terminal, so the two panels line up top and bottom */
+.whoami .ida-avatar {
+    flex-shrink: 0;
+    width: var(--ida-size);
+    height: auto;
+    align-self: stretch;
+    border-radius: 10px;
+}
+
+/* whoami "cat whoami" terminal */
+.whoami-term {
+    flex: 1;
+    min-width: 0;
+    background: #0d1117;
+    border: 1px solid #1f2733;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+    font-size: 0.82em;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+.whoami-term .bar {
+    background: #161b22;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #1f2733;
+}
+
+.whoami-term .bar i {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.whoami-term .bar .r { background: #ff5f56; }
+.whoami-term .bar .y { background: #ffbd2e; }
+.whoami-term .bar .g { background: #27c93f; }
+
+.whoami-term .bar b {
+    color: #8b98a5;
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: 0.85em;
+}
+
+.whoami-term .body {
+    padding: 14px 16px;
+    color: #adbac7;
+    line-height: 1.75;
+}
+
+.whoami-term .cmd { color: #e6edf3; }
+.whoami-term .cmd::before { content: "$ "; color: #3ef29b; }
+.whoami-term .k { color: #6cb6ff; }
+.whoami-term .s { color: #a5d6ff; }
+.whoami-term .cm { color: #768390; }
+
+/* stack on small screens */
+@media (max-width: 600px) {
+    .whoami {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whoami .ida-avatar {
+        --ida-size: 150px;
+    }
+
+    .whoami-term {
+        width: 100%;
+        font-size: 0.78em;
+    }
 }
 
 /* ---- Shared card pieces ---- */
