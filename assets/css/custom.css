@@ -399,3 +399,192 @@ a:hover {
     height: 14px;
     fill: #57606a;
 }
+
+/* ── IDA animated avatar · slim port of IDA_Logo_Animation.html ──
+   Usage: set the size with --ida-size on .ida-avatar (default 100px).
+   Requires the base GIF (your existing modern_ida101.GIF) as the <img> src.
+   Optional: load "JetBrains Mono" (Google Fonts) for the exact handle font. */
+.ida-avatar {
+  --ida-size: 100px;
+  position: relative;
+  width: var(--ida-size); height: var(--ida-size);
+  overflow: hidden;
+  background: #0c0d10;
+  box-shadow: 0 .04em .11em rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.07);
+  /* container-relative unit: 1em == size/26.67 (30px at 800px, like the original) */
+  font-size: calc(var(--ida-size) * 0.0375);
+  user-select: none;
+}
+.ida-avatar > * { position: absolute; pointer-events: none; }
+
+/* base image · seamless ken-burns drift + noir grade
+   (slight over-bleed so the composited edge never exposes the tile) */
+.ida-base {
+  inset: -3%; width: 106%; height: 106%; object-fit: cover;
+  filter: saturate(0.22) contrast(1.22) brightness(1.03);
+  animation: ida-kenburns 4s linear infinite;
+  will-change: transform;
+}
+@keyframes ida-kenburns {
+  0% { transform: scale(1.0600) translate(0.000%, 0.000%); }
+  12.5% { transform: scale(1.0727) translate(0.424%, -0.132%); }
+  25% { transform: scale(1.0780) translate(0.600%, -0.450%); }
+  37.5% { transform: scale(1.0727) translate(0.424%, -0.768%); }
+  50% { transform: scale(1.0600) translate(0.000%, -0.900%); }
+  62.5% { transform: scale(1.0473) translate(-0.424%, -0.768%); }
+  75% { transform: scale(1.0420) translate(-0.600%, -0.450%); }
+  87.5% { transform: scale(1.0473) translate(-0.424%, -0.132%); }
+  100% { transform: scale(1.0600) translate(-0.000%, 0.000%); }
+}
+
+/* mood tint (noir) */
+.ida-tint { inset: 0; background: rgba(80,105,145,.14); mix-blend-mode: overlay; }
+
+/* cigarette ember glow */
+.ida-ember {
+  left: 78%; top: 44%; width: 9%; height: 7%;
+  transform: translate(-50%,-50%); border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,120,40,.85) 0%, rgba(255,80,30,.25) 45%, rgba(255,80,30,0) 70%);
+  filter: blur(.1em); mix-blend-mode: screen;
+  animation: ida-ember 4s linear infinite;
+}
+@keyframes ida-ember {
+  0%{opacity:0.360}
+  2.5%{opacity:0.463}
+  5%{opacity:0.360}
+  7.5%{opacity:0.137}
+  10%{opacity:0.056}
+  12.5%{opacity:0.200}
+  15%{opacity:0.360}
+  17.5%{opacity:0.325}
+  20%{opacity:0.172}
+  22.5%{opacity:0.158}
+  25%{opacity:0.360}
+  27.5%{opacity:0.562}
+  30%{opacity:0.548}
+  32.5%{opacity:0.395}
+  35%{opacity:0.360}
+  37.5%{opacity:0.520}
+  40%{opacity:0.664}
+  42.5%{opacity:0.583}
+  45%{opacity:0.360}
+  47.5%{opacity:0.257}
+  50%{opacity:0.360}
+  52.5%{opacity:0.463}
+  55%{opacity:0.360}
+  57.5%{opacity:0.137}
+  60%{opacity:0.056}
+  62.5%{opacity:0.200}
+  65%{opacity:0.360}
+  67.5%{opacity:0.325}
+  70%{opacity:0.172}
+  72.5%{opacity:0.158}
+  75%{opacity:0.360}
+  77.5%{opacity:0.562}
+  80%{opacity:0.548}
+  82.5%{opacity:0.395}
+  85%{opacity:0.360}
+  87.5%{opacity:0.520}
+  90%{opacity:0.664}
+  92.5%{opacity:0.583}
+  95%{opacity:0.360}
+  97.5%{opacity:0.257}
+  100%{opacity:0.360}
+}
+
+/* smoke plumes */
+.ida-smoke {
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(235,238,245,.9) 0%, rgba(225,230,240,.35) 45%, rgba(220,225,235,0) 72%);
+  filter: blur(.233em);
+  animation: 4s linear infinite;
+  will-change: transform, opacity;
+}
+.ida-smoke.s1 { width:10%; height:15%;   animation-name: ida-smoke1; }
+.ida-smoke.s2 { width:7%;  height:10.5%; animation-name: ida-smoke2; animation-delay: -1.52s; }
+.ida-smoke.s3 { width:12%; height:18%;   animation-name: ida-smoke3; animation-delay: -2.84s; }
+@keyframes ida-smoke1 {
+  0%{top:42.00%;left:76.00%;opacity:0.000;transform:translate(-50%,-50%) scale(0.60) rotate(0.0deg)}
+  10%{top:37.80%;left:78.02%;opacity:0.117;transform:translate(-50%,-50%) scale(0.73) rotate(6.1deg)}
+  20%{top:33.60%;left:78.38%;opacity:0.223;transform:translate(-50%,-50%) scale(0.86) rotate(7.1deg)}
+  30%{top:29.40%;left:76.77%;opacity:0.307;transform:translate(-50%,-50%) scale(0.99) rotate(2.3deg)}
+  40%{top:25.20%;left:74.53%;opacity:0.361;transform:translate(-50%,-50%) scale(1.12) rotate(-4.4deg)}
+  50%{top:21.00%;left:73.50%;opacity:0.380;transform:translate(-50%,-50%) scale(1.25) rotate(-7.5deg)}
+  60%{top:16.80%;left:74.53%;opacity:0.361;transform:translate(-50%,-50%) scale(1.38) rotate(-4.4deg)}
+  70%{top:12.60%;left:76.77%;opacity:0.307;transform:translate(-50%,-50%) scale(1.51) rotate(2.3deg)}
+  80%{top:8.40%;left:78.38%;opacity:0.223;transform:translate(-50%,-50%) scale(1.64) rotate(7.1deg)}
+  90%{top:4.20%;left:78.02%;opacity:0.117;transform:translate(-50%,-50%) scale(1.77) rotate(6.1deg)}
+  100%{top:0.00%;left:76.00%;opacity:0.000;transform:translate(-50%,-50%) scale(1.90) rotate(0.0deg)}
+}
+@keyframes ida-smoke2 {
+  0%{top:40.00%;left:75.86%;opacity:0.000;transform:translate(-50%,-50%) scale(0.60) rotate(-6.4deg)}
+  10%{top:35.80%;left:74.50%;opacity:0.117;transform:translate(-50%,-50%) scale(0.73) rotate(-10.5deg)}
+  20%{top:31.60%;left:76.03%;opacity:0.223;transform:translate(-50%,-50%) scale(0.86) rotate(-5.9deg)}
+  30%{top:27.40%;left:79.18%;opacity:0.307;transform:translate(-50%,-50%) scale(0.99) rotate(3.5deg)}
+  40%{top:23.20%;left:81.36%;opacity:0.361;transform:translate(-50%,-50%) scale(1.12) rotate(10.1deg)}
+  50%{top:19.00%;left:80.77%;opacity:0.380;transform:translate(-50%,-50%) scale(1.25) rotate(8.3deg)}
+  60%{top:14.80%;left:77.89%;opacity:0.361;transform:translate(-50%,-50%) scale(1.38) rotate(-0.3deg)}
+  70%{top:10.60%;left:75.11%;opacity:0.307;transform:translate(-50%,-50%) scale(1.51) rotate(-8.7deg)}
+  80%{top:6.40%;left:74.71%;opacity:0.223;transform:translate(-50%,-50%) scale(1.64) rotate(-9.9deg)}
+  90%{top:2.20%;left:77.02%;opacity:0.117;transform:translate(-50%,-50%) scale(1.77) rotate(-2.9deg)}
+  100%{top:-2.00%;left:80.14%;opacity:0.000;transform:translate(-50%,-50%) scale(1.90) rotate(6.4deg)}
+}
+@keyframes ida-smoke3 {
+  0%{top:43.00%;left:75.46%;opacity:0.000;transform:translate(-50%,-50%) scale(0.60) rotate(4.4deg)}
+  10%{top:38.80%;left:75.96%;opacity:0.117;transform:translate(-50%,-50%) scale(0.73) rotate(5.9deg)}
+  20%{top:34.60%;left:74.85%;opacity:0.223;transform:translate(-50%,-50%) scale(0.86) rotate(2.6deg)}
+  30%{top:30.40%;left:73.04%;opacity:0.307;transform:translate(-50%,-50%) scale(0.99) rotate(-2.9deg)}
+  40%{top:26.20%;left:72.02%;opacity:0.361;transform:translate(-50%,-50%) scale(1.12) rotate(-6.0deg)}
+  50%{top:22.00%;left:72.63%;opacity:0.380;transform:translate(-50%,-50%) scale(1.25) rotate(-4.1deg)}
+  60%{top:17.80%;left:74.37%;opacity:0.361;transform:translate(-50%,-50%) scale(1.38) rotate(1.1deg)}
+  70%{top:13.60%;left:75.81%;opacity:0.307;transform:translate(-50%,-50%) scale(1.51) rotate(5.4deg)}
+  80%{top:9.40%;left:75.75%;opacity:0.223;transform:translate(-50%,-50%) scale(1.64) rotate(5.3deg)}
+  90%{top:5.20%;left:74.25%;opacity:0.117;transform:translate(-50%,-50%) scale(1.77) rotate(0.8deg)}
+  100%{top:1.00%;left:72.54%;opacity:0.000;transform:translate(-50%,-50%) scale(1.90) rotate(-4.4deg)}
+}
+
+/* film grain — noise tile is injected by the script below */
+.ida-grain {
+  inset: 0; background-size: 128px 128px;
+  opacity: .316; mix-blend-mode: overlay;
+  animation: ida-grain .667s step-end infinite;
+}
+@keyframes ida-grain {
+  0.000%{background-position:0px 0px}
+  12.500%{background-position:37px 81px}
+  25.000%{background-position:91px 14px}
+  37.500%{background-position:55px 55px}
+  50.000%{background-position:13px 97px}
+  62.500%{background-position:77px 29px}
+  75.000%{background-position:29px 63px}
+  87.500%{background-position:63px 7px}
+  100%{background-position:0px 0px}
+}
+
+/* vignette */
+.ida-vig {
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0) 48%, rgba(0,0,0,.78) 100%);
+}
+
+/* handle overlay */
+.ida-handle {
+  left: 0; right: 0; bottom: 6.5%;
+  display: flex; flex-direction: column; align-items: center; gap: .267em;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  text-align: center; line-height: 1;
+}
+.ida-handle .h {
+  font-weight: 700; font-size: 1em; letter-spacing: .08em;
+  color: rgba(120,255,170,.95);
+  text-shadow: 0 0 .4em rgba(80,255,150,.45), 0 .067em .2em rgba(0,0,0,.9);
+}
+.ida-handle .h .p { color: rgba(120,255,170,.5); }
+.ida-handle .t {
+  font-weight: 400; font-size: .433em; letter-spacing: .18em;
+  color: rgba(200,210,220,.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ida-base, .ida-ember, .ida-smoke, .ida-grain { animation: none; }
+}
