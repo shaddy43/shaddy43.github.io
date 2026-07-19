@@ -72,9 +72,9 @@ a:hover {
 
 .whoami-term .cmd { color: #e6edf3; }
 .whoami-term .cmd::before { content: "$ "; color: #3ef29b; }
-.whoami-term .k { color: #6cb6ff; }
-.whoami-term .s { color: #a5d6ff; }
-.whoami-term .cm { color: #768390; }
+.whoami-term .k { color: #ff5555; }   /* keys — bright red */
+.whoami-term .s { color: #3ef29b; }   /* values — bright green */
+.whoami-term .cm { color: #6cb6ff; }  /* comment — blue */
 
 /* stack on small screens */
 @media (max-width: 600px) {
