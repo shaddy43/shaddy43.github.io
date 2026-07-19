@@ -526,7 +526,7 @@ a:hover {
 
 /* cigarette ember glow */
 .ida-ember {
-  left: 78%; top: 44%; width: 9%; height: 7%;
+  left: 82%; top: 45%; width: 9%; height: 7%;
   transform: translate(-50%,-50%); border-radius: 50%;
   background: radial-gradient(circle, rgba(255,120,40,.85) 0%, rgba(255,80,30,.25) 45%, rgba(255,80,30,0) 70%);
   filter: blur(.1em); mix-blend-mode: screen;
