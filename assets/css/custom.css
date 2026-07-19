@@ -83,8 +83,13 @@ a:hover {
         align-items: center;
     }
 
+    /* column layout: force an explicit square so it can never collapse
+       (stretch would apply horizontally here and height:auto -> 0) */
     .whoami .ida-avatar {
-        --ida-size: 150px;
+        flex: 0 0 auto;
+        width: 180px;
+        height: 180px;
+        align-self: center;
     }
 
     .whoami-term {
