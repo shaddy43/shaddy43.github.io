@@ -1,10 +1,16 @@
 # Blog posts and analysis reports, newest first.
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
+- title: "From Alert to Answer: AI-Driven DFIR with Claude Code & Velociraptor"
+  description: "How an AI coding agent became a digital-forensics operator, writing detection logic, running fleet-wide hunts, and triaging a live malware hit end to end"
+  image: "/Assets/hero.webp"
+  meta: "23 Jul 2026 • 10 minute read"
+  ribbon: "Latest"
+  link: "https://shaddy43.github.io/DetectionAndResponse/posts/from-alert-to-answer.html"
+
 - title: "BrowserSnatch: Detection & Threat Intelligence Wiki"
   description: "A community detection knowledge base for BrowserSnatch, an open-source browser data extraction tool"
   image: "/Assets/browsersnatch.jpg"
   meta: "17 Jul 2026 • 20 minute read"
-  ribbon: "Latest"
   link: "https://github.com/shaddy43/BrowserSnatch/wiki"
 
 - title: "Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations"

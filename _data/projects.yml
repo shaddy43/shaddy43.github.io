@@ -2,10 +2,15 @@
 # Stars, forks and language are pulled live from the GitHub API at page load
 # (assets/js/github-stats.js). Maintain title, description, tags, ribbon, link.
 # `ribbon` is optional: "Latest" (blue), "Featured" (gold), "Archived" (grey).
+- title: "Detection & Response"
+  description: "A field journal for hands-on defence: endpoint forensics, detection engineering, threat hunting, and the AI-assisted workflows that tie them together"
+  tags: [detection-engineering, dfir, threat-hunting, ai-agents]
+  ribbon: "Latest"
+  link: "https://github.com/shaddy43/DetectionAndResponse"
+
 - title: "BrowserSnatch"
   description: "BrowserSnatch is an offensive-security research tool that extracts and decrypts sensitive data from web browsers"
   tags: [infostealer, windows, browsersnatch]
-  ribbon: "Latest"
   link: "https://github.com/shaddy43/BrowserSnatch"
 
 - title: "MalwareAnalysisSeries"
