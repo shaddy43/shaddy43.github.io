@@ -1,0 +1,401 @@
+/* ---------------------------------------------------------------------------
+   base.css — page chrome, typography and theme tokens.
+
+   This file replaces everything the old jekyll-theme-slate stylesheet used to
+   provide (base element styling + the header/content/footer wrappers), so the
+   site no longer depends on a Jekyll theme. Component styling (cards, badges,
+   the whoami terminal, the IDA avatar) lives in custom.css and reads the same
+   tokens declared here.
+
+   Theming: light is the default. Dark applies when the OS asks for it, unless
+   the visitor explicitly chose light via the header toggle. The toggle stamps
+   data-theme on <html>, which wins over the media query in both directions.
+   --------------------------------------------------------------------------- */
+
+:root {
+    --bg:          #f6f8fa;
+    --bg-panel:    #ffffff;
+    --bg-subtle:   #eef1f5;
+    --border:      #dfe3e9;
+    --border-soft: #e9edf2;
+
+    --text:        #3a4451;
+    --text-dim:    #6a7583;
+    --heading:     #0f1720;
+
+    /* gold — picked to echo the cigarette ember on the avatar and the golden
+       ring that already highlights a hovered card */
+    --accent:      #b45309;
+    --accent-warm: #d9a520;
+    /* blue — the interactive colour the repo cards and tags already use */
+    --link:        #0969da;
+    --link-soft:   #ddf4ff;
+    --btn:         #0969da;
+    --badge-neutral: #555c66;
+
+    --header-bg:   rgba(246, 248, 250, 0.82);
+    --shadow:      0 1px 2px rgba(15, 23, 32, .05), 0 1px 3px rgba(15, 23, 32, .07);
+    --shadow-lg:   0 8px 22px rgba(15, 23, 32, .12);
+    --ring:        0 0 0 2px var(--accent-warm);
+
+    --radius:      10px;
+    --maxw:        960px;
+    --mono:        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    color-scheme: light;
+}
+
+/* Dark palette — applied on OS preference unless light was explicitly chosen. */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg:          #0f141b;
+        --bg-panel:    #161d26;
+        --bg-subtle:   #1c2531;
+        --border:      #273240;
+        --border-soft: #202a36;
+
+        --text:        #c3ccd7;
+        --text-dim:    #8b97a6;
+        --heading:     #eef3f8;
+
+        --accent:      #fbbf24;
+        --accent-warm: #f0b429;
+        --link:        #58a6ff;
+        --link-soft:   #12283f;
+        --btn:         #1f6feb;
+        --badge-neutral: #39424e;
+
+        --header-bg:   rgba(15, 20, 27, 0.82);
+        --shadow:      0 1px 2px rgba(0, 0, 0, .32), 0 1px 3px rgba(0, 0, 0, .38);
+        --shadow-lg:   0 8px 22px rgba(0, 0, 0, .48);
+
+        color-scheme: dark;
+    }
+}
+
+/* Same palette, forced on by the toggle regardless of OS preference. */
+:root[data-theme="dark"] {
+    --bg:          #0f141b;
+    --bg-panel:    #161d26;
+    --bg-subtle:   #1c2531;
+    --border:      #273240;
+    --border-soft: #202a36;
+
+    --text:        #c3ccd7;
+    --text-dim:    #8b97a6;
+    --heading:     #eef3f8;
+
+    --accent:      #fbbf24;
+    --accent-warm: #f0b429;
+    --link:        #58a6ff;
+    --link-soft:   #12283f;
+    --btn:         #1f6feb;
+    --badge-neutral: #39424e;
+
+    --header-bg:   rgba(15, 20, 27, 0.82);
+    --shadow:      0 1px 2px rgba(0, 0, 0, .32), 0 1px 3px rgba(0, 0, 0, .38);
+    --shadow-lg:   0 8px 22px rgba(0, 0, 0, .48);
+
+    color-scheme: dark;
+}
+
+/* ---- Reset / base ---- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Typography (was supplied by the theme) ---- */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading);
+    font-family: 'Carter One', var(--sans);
+    font-weight: normal;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    text-wrap: balance;
+}
+
+h1 { font-size: 2.1em; letter-spacing: -0.01em; }
+
+/* Section headings get a hairline rule so the page reads as distinct blocks
+   without needing the theme's heavy wrapper backgrounds. */
+h2 {
+    font-size: 1.5em;
+    margin-top: 46px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 78px;
+}
+
+h3 { font-size: 1.2em; margin-top: 26px; }
+
+h4 {
+    font-size: 0.82em;
+    margin-top: 30px;
+    font-family: var(--sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--text-dim);
+}
+
+h5, h6 { font-size: 1em; }
+
+p { margin: 0 0 16px; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+strong, b { color: var(--heading); font-weight: 600; }
+
+ul, ol { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+img { max-width: 100%; }
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 34px 0;
+}
+
+blockquote {
+    margin: 0 0 16px;
+    padding: 2px 0 2px 16px;
+    border-left: 3px solid var(--accent-warm);
+    color: var(--text-dim);
+}
+
+code, pre, kbd, samp { font-family: var(--mono); font-size: 0.9em; }
+
+code {
+    background: var(--bg-subtle);
+    color: var(--heading);
+    border-radius: 5px;
+    padding: 0.15em 0.4em;
+}
+
+pre {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    overflow-x: auto;
+}
+pre code { background: none; padding: 0; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 18px;
+    font-size: 0.94em;
+}
+th, td {
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+}
+th { background: var(--bg-subtle); color: var(--heading); font-weight: 600; }
+
+/* ---- Layout ---- */
+.wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* ---- Site header ---- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--header-bg);
+    backdrop-filter: saturate(180%) blur(9px);
+    -webkit-backdrop-filter: saturate(180%) blur(9px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* thin warm hairline so the sticky bar has a defined edge while scrolling */
+.site-header::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
+    opacity: .5;
+}
+
+.site-header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+/* Brand is set as a shell prompt to match the whoami terminal and the
+   handle burned into the avatar. */
+.brand {
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--heading);
+    white-space: nowrap;
+}
+.brand .sigil { color: var(--accent); }
+.brand .caret {
+    display: inline-block;
+    width: 0.55em;
+    margin-left: 2px;
+    color: var(--accent-warm);
+    animation: caret-blink 1.15s steps(1) infinite;
+}
+@keyframes caret-blink { 0%, 55% { opacity: 1; } 56%, 100% { opacity: 0; } }
+
+.header-right { display: flex; align-items: center; gap: 4px; }
+
+.nav a {
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    margin-left: 18px;
+    transition: color .15s ease;
+}
+.nav a:hover { color: var(--accent); }
+
+/* ---- Theme toggle ---- */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px; height: 34px;
+    margin-left: 16px;
+    padding: 0;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-dim);
+    cursor: pointer;
+    line-height: 0;
+    transition: border-color .15s ease, color .15s ease;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.theme-toggle svg {
+    width: 17px; height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Show the icon for the theme you would switch *to*. */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+
+/* ---- Hero ---- */
+.site-hero {
+    padding: 52px 0 34px;
+    border-bottom: 1px solid var(--border);
+}
+.site-hero h1 { margin: 0 0 12px; }
+.site-hero .tagline {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 1.03rem;
+    max-width: 640px;
+}
+.site-hero .eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 4px 13px;
+    font-family: var(--mono);
+    font-size: 0.71rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+}
+
+/* ---- Main content ---- */
+.site-main { padding-bottom: 20px; }
+.site-main > .wrap { padding-top: 6px; }
+
+/* ---- Footer ---- */
+.site-footer {
+    margin-top: 56px;
+    padding: 26px 0 40px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 0.84rem;
+}
+.site-footer .wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.site-footer a { color: var(--text-dim); }
+.site-footer a:hover { color: var(--accent); }
+
+/* ---- Responsive ---- */
+@media (max-width: 720px) {
+    body { font-size: 15px; }
+
+    .site-header .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav { display: flex; flex-wrap: wrap; gap: 0 4px; }
+    .nav a { margin-left: 0; margin-right: 14px; }
+    .theme-toggle { margin-left: 0; }
+
+    .site-hero { padding: 34px 0 26px; }
+    h1 { font-size: 1.7em; }
+    h2 { font-size: 1.3em; margin-top: 36px; }
+}
+
+/* ---- Motion / print ---- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .brand .caret { animation: none; }
+}
+
+@media print {
+    .site-header, .site-footer, .theme-toggle, .pagination-controls { display: none; }
+    body { background: #fff; color: #000; }
+}

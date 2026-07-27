@@ -101,13 +101,14 @@ a:hover {
 /* ---- Shared card pieces ---- */
 .card,
 .card-square {
-    background: #dbd7d7;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
     overflow: hidden;
     width: 100%;
     text-decoration: none;
-    color: #333;
+    color: var(--text);
     font-family: 'Carter One', sans-serif;
     display: flex;
     position: relative;
@@ -119,7 +120,7 @@ a:hover {
     transform: translateY(-4px);
     /* soft drop shadow + a golden ring highlight (ring drawn via box-shadow
        so it doesn't shift layout the way a real border would) */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 2px #d9a520;
+    box-shadow: var(--shadow-lg), var(--ring);
 }
 
 .card:hover .card-ribbon,
@@ -135,7 +136,7 @@ a:hover {
 .card-title {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #000;
+    color: var(--heading);
 }
 
 /* Body text uses a clean sans-serif to contrast the Carter One display title */
@@ -143,7 +144,7 @@ a:hover {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 0.9em;
     font-weight: 400;
-    color: #555;
+    color: var(--text-dim);
     line-height: 1.5;
     margin-bottom: 12px;
 }
@@ -155,14 +156,14 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #999;
+    color: var(--text-dim);
 }
 
 .card-ribbon {
     position: absolute;
     top: 15px;
     left: -5px;
-    background: var(--ribbon, DodgerBlue);
+    background: var(--ribbon, var(--btn));
     color: #fff;
     padding: 5px 10px;
     font-size: 0.85em;
@@ -237,7 +238,7 @@ a:hover {
 
 .pagination-controls button,
 .pagination-controls span.page-number {
-    background: DodgerBlue;
+    background: var(--btn);
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -249,18 +250,19 @@ a:hover {
 }
 
 .pagination-controls button:disabled {
-    background: #ccc;
+    background: var(--bg-subtle);
+    color: var(--text-dim);
     cursor: not-allowed;
 }
 
 .pagination-controls span.page-number {
-    background: #f4f4f4;
-    color: #333;
+    background: var(--bg-subtle);
+    color: var(--text);
     cursor: default;
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background: #1e90ff;
+    filter: brightness(1.1);
 }
 
 /* Pagination is driven by JS: controls ship with the `hidden` attribute and
@@ -307,7 +309,7 @@ a:hover {
     display: flex;
     align-items: center;
     padding: 0 10px;
-    background: #555;
+    background: var(--badge-neutral, #555);
     color: #fff;
 }
 
@@ -359,7 +361,7 @@ a:hover {
     display: flex;
     align-items: center;
     padding: 0 10px;
-    background: #555;
+    background: var(--badge-neutral, #555);
     color: #fff;
 }
 
@@ -371,23 +373,23 @@ a:hover {
 }
 
 .repo {
-    background: #fff;
-    border: 1px solid #d8dee4;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 16px 18px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-decoration: none;
-    color: #333;
+    color: var(--text);
     transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .repo:hover {
     transform: translateY(-3px);
     /* golden ring highlight to match the post cards */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12), 0 0 0 2px #d9a520;
-    border-color: #d9a520;
+    box-shadow: var(--shadow-lg), var(--ring);
+    border-color: var(--accent-warm);
 }
 
 .repo-top {
@@ -399,12 +401,12 @@ a:hover {
 .repo-icon {
     width: 16px;
     height: 16px;
-    fill: #57606a;
+    fill: var(--text-dim);
     flex-shrink: 0;
 }
 
 .repo-name {
-    color: #0969da;
+    color: var(--link);
     font-weight: 700;
     font-size: 1.05em;
     line-height: 1.2;
@@ -417,18 +419,18 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: #fff;
-    background: #1e90ff;
+    background: var(--btn);
     padding: 2px 8px;
     border-radius: 20px;
     white-space: nowrap;
 }
 
-.repo-ribbon.r-featured { background: #d9a520; }
+.repo-ribbon.r-featured { background: var(--accent-warm); }
 .repo-ribbon.r-archived { background: #8b8b8b; }
 
 .repo-desc {
     font-size: 0.86em;
-    color: #57606a;
+    color: var(--text-dim);
     line-height: 1.45;
     flex-grow: 1;
     margin: 0;
@@ -443,8 +445,8 @@ a:hover {
 .repo-tags .tag {
     font-size: 0.7em;
     font-weight: 600;
-    background: #ddf4ff;
-    color: #0969da;
+    background: var(--link-soft);
+    color: var(--link);
     border-radius: 20px;
     padding: 2px 9px;
 }
@@ -454,7 +456,7 @@ a:hover {
     align-items: center;
     gap: 16px;
     font-size: 0.78em;
-    color: #57606a;
+    color: var(--text-dim);
     min-height: 16px;
 }
 
@@ -481,7 +483,7 @@ a:hover {
 .repo-stat svg {
     width: 14px;
     height: 14px;
-    fill: #57606a;
+    fill: var(--text-dim);
 }
 
 /* ── IDA animated avatar · slim port of IDA_Logo_Animation.html ──
