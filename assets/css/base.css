@@ -39,8 +39,9 @@
     --ring:        0 0 0 2px var(--accent-warm);
 
     --radius:      10px;
-    --maxw:        960px;
+    --maxw:        880px;
     --mono:        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --display:     'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     --sans:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
     color-scheme: light;
@@ -119,14 +120,15 @@ body {
 /* ---- Typography (was supplied by the theme) ---- */
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading);
-    font-family: 'Carter One', var(--sans);
-    font-weight: normal;
+    font-family: var(--display);
+    font-weight: 700;
+    letter-spacing: -0.015em;
     line-height: 1.25;
     margin: 0 0 14px;
     text-wrap: balance;
 }
 
-h1 { font-size: 2.1em; letter-spacing: -0.01em; }
+h1 { font-size: 2.1em; }
 
 /* Section headings get a hairline rule so the page reads as distinct blocks
    without needing the theme's heavy wrapper backgrounds. */
@@ -323,12 +325,11 @@ th { background: var(--bg-subtle); color: var(--heading); font-weight: 600; }
     padding: 52px 0 34px;
     border-bottom: 1px solid var(--border);
 }
-.site-hero h1 { margin: 0 0 12px; }
-.site-hero .tagline {
+.site-hero h1 {
     margin: 0;
-    color: var(--text-dim);
-    font-size: 1.03rem;
-    max-width: 640px;
+    font-size: 1.62em;
+    line-height: 1.35;
+    max-width: 680px;
 }
 .site-hero .eyebrow {
     display: inline-block;
@@ -386,6 +387,7 @@ th { background: var(--bg-subtle); color: var(--heading); font-weight: 600; }
 
     .site-hero { padding: 34px 0 26px; }
     h1 { font-size: 1.7em; }
+    .site-hero h1 { font-size: 1.24em; }
     h2 { font-size: 1.3em; margin-top: 36px; }
 }
 

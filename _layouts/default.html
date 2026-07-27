@@ -47,8 +47,9 @@
     <div class="site-hero">
       <div class="wrap">
         <span class="eyebrow">Portfolio</span>
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="tagline">{{ site.description | default: site.github.project_tagline }}</p>
+        <!-- The name and handle are already the first thing the whoami terminal
+             prints, so the hero leads with the roles instead of repeating them. -->
+        <h1>{{ site.description | default: site.github.project_tagline }}</h1>
       </div>
     </div>
 

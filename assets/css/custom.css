@@ -109,7 +109,7 @@ a:hover {
     width: 100%;
     text-decoration: none;
     color: var(--text);
-    font-family: 'Carter One', sans-serif;
+    font-family: var(--display);
     display: flex;
     position: relative;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -139,7 +139,7 @@ a:hover {
     color: var(--heading);
 }
 
-/* Body text uses a clean sans-serif to contrast the Carter One display title */
+/* Body text uses a clean sans-serif to contrast the display-face title */
 .card-description {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 0.9em;
@@ -180,7 +180,6 @@ a:hover {
 }
 
 .card {
-    max-width: 600px;
     flex-direction: row;
 }
 
@@ -233,7 +232,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    font-family: 'Carter One', sans-serif;
+    font-family: var(--display);
 }
 
 .pagination-controls button,
