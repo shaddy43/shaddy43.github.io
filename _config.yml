@@ -1,4 +1,9 @@
-theme: jekyll-theme-slate
 title: Shayan Ahmed Khan (shaddy43)
-description: Threat Researcher · Detection & Response · Malware Developer
+description: Threat Researcher · Detection & Response · Offensive Tooling
 lang: en
+
+# No Jekyll theme: page chrome and typography are owned by assets/css/base.css.
+# jekyll-seo-tag is requested explicitly because it used to come along with the
+# theme's dependencies — it powers the {% seo %} tag in _layouts/default.html.
+plugins:
+  - jekyll-seo-tag
