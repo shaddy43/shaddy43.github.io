@@ -83,8 +83,9 @@ description: Threat Researcher · Detection & Response · Offensive Tooling
                 {% if project.ribbon %}<span class="repo-ribbon r-{{ project.ribbon | downcase }}">{{ project.ribbon }}</span>{% endif %}
             </div>
             <p class="repo-desc">{{ project.description }}</p>
-            {% if project.tags %}
+            {% if project.tags or project.pages %}
             <div class="repo-tags">
+                {% if project.pages %}<span class="tag tag-pages"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8c0-.4.04-.79.11-1.17l.83.83.71.71v1.42l1.42 1.41.7.71v1.79A6.51 6.51 0 011.5 8zm6.5 6.5c-.35 0-.7-.03-1.03-.09v-1.36l1.41-1.41.3-.71-.71-1.42-.7-.7H5.4l-.7-.71v-1.4l.7-.71h1.42l.7-.71V4.06l-.7-.7h-.71l-.71.7-.7-.7v-.72A6.47 6.47 0 018 1.5c1.53 0 2.94.53 4.05 1.41l-.63.63-.71.71v1.42l.71.7h1.41l.63.63c.02.32.03.65.03.99A6.5 6.5 0 018 14.5z"/></svg>GitHub Pages</span>{% endif %}
                 {% for tag in project.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
             </div>
             {% endif %}

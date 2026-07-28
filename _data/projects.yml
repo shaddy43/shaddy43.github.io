@@ -2,10 +2,13 @@
 # Stars, forks and language are pulled live from the GitHub API at page load
 # (assets/js/github-stats.js). Maintain title, description, tags, ribbon, link.
 # `ribbon` is optional: "Latest" (blue), "Featured" (gold), "Archived" (grey).
+# `pages: true` marks a repo that is also published as a live GitHub Pages site;
+# it renders a green "GitHub Pages" tag ahead of the normal tags.
 - title: "Detection & Response"
   description: "A field journal for hands-on defence: endpoint forensics, detection engineering, threat hunting, and the AI-assisted workflows that tie them together"
   tags: [detection-engineering, dfir, threat-hunting, ai-agents]
   ribbon: "Latest"
+  pages: true
   link: "https://shaddy43.github.io/DetectionAndResponse/"
 
 - title: "BrowserSnatch"
@@ -17,6 +20,7 @@
   description: "Deep technical malware analysis reports, RE tools, unpacked stages, and recreated TTPs with detections for infamous malware families"
   tags: [reversing, dfir, cracking]
   ribbon: "Featured"
+  pages: true
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/"
 
 - title: "Position Independent Backdoor"
