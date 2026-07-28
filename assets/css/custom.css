@@ -450,6 +450,24 @@ a:hover {
     padding: 2px 9px;
 }
 
+/* Marks a repo that is also live as a GitHub Pages site. Green reads as a
+   deployment status and keeps it clearly apart from the blue topic tags. */
+.repo-tags .tag-pages {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--live-soft);
+    color: var(--live);
+    box-shadow: inset 0 0 0 1px currentColor;
+}
+
+.repo-tags .tag-pages svg {
+    width: 10px;
+    height: 10px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 .repo-foot {
     display: flex;
     align-items: center;
