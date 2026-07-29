@@ -2,6 +2,19 @@ title: Shayan Ahmed Khan (shaddy43)
 description: Threat Researcher · Detection & Response · Offensive Tooling
 lang: en
 
+# url lets jekyll-seo-tag emit absolute canonical and og:image URLs — link
+# scrapers (LinkedIn, Slack, X) ignore relative image paths.
+url: https://shaddy43.github.io
+# Social preview card shown when the site is shared. jekyll-seo-tag reads
+# `image` from page scope, so it is applied to every page through defaults
+# rather than as a bare site-level key. Supplying it also flips the Twitter
+# card from "summary" to "summary_large_image" automatically.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /Assets/og-card.jpg
+
 # No Jekyll theme: page chrome and typography are owned by assets/css/base.css.
 # jekyll-seo-tag is requested explicitly because it used to come along with the
 # theme's dependencies — it powers the {% seo %} tag in _layouts/default.html.

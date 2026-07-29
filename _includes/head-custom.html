@@ -1,4 +1,13 @@
-<link rel="icon" type="image/png" href="{{ '/Assets/modern_ida101.png' | relative_url }}">
+<!-- Icons. The 64px favicon alone left browsers with nothing bigger to draw, so
+     start-page and bookmark tiles fell back to a small centred thumbnail. The
+     180px touch icon and the manifest give Safari, iOS, Chrome and Edge a
+     full-size source to render edge to edge. -->
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/Assets/favicon-32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ '/Assets/icon-192.png' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/Assets/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<meta name="msapplication-TileColor" content="#0f141b">
+<meta name="msapplication-TileImage" content="{{ '/Assets/icon-192.png' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
