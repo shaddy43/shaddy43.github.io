@@ -1,7 +1,7 @@
 # Blog posts and analysis reports, newest first.
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
 - title: "Autonomous Reverse Engineering: Evaluating AI with Interactive Disassembly"
-  description: "Claude Code driving Ghidra over MCP across three binaries — a symbol-rich build, stripped Ryuk, and packed XLoader — and where its confident narrative stopped matching the bytes"
+  description: "Claude Code driving Ghidra over MCP across three binaries, a symbol-rich build, a stripped Ryuk, and a packed XLoader"
   image: "/Assets/ai-reversing.webp"
   meta: "01 Aug 2026 • 16 minute read"
   ribbon: "Latest"
