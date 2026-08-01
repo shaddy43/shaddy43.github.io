@@ -1,10 +1,16 @@
 # Blog posts and analysis reports, newest first.
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
+- title: "Autonomous Reverse Engineering: Evaluating AI with Interactive Disassembly"
+  description: "Claude Code driving Ghidra over MCP across three binaries — a symbol-rich build, stripped Ryuk, and packed XLoader — and where its confident narrative stopped matching the bytes"
+  image: "/Assets/ai-reversing.webp"
+  meta: "01 Aug 2026 • 16 minute read"
+  ribbon: "Latest"
+  link: "https://shaddy43.github.io/MalwareAnalysisSeries/AI-Assisted-Reversing/"
+
 - title: "From Alert to Answer: AI-Driven DFIR with Claude Code & Velociraptor"
   description: "How an AI coding agent became a digital-forensics operator, writing detection logic, running fleet-wide hunts, and triaging a live malware hit end to end"
   image: "/Assets/hero.webp"
   meta: "23 Jul 2026 • 10 minute read"
-  ribbon: "Latest"
   link: "https://shaddy43.github.io/DetectionAndResponse/posts/from-alert-to-answer.html"
 
 - title: "BrowserSnatch: Detection & Threat Intelligence Wiki"
