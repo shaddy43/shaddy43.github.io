@@ -133,9 +133,14 @@ a:hover {
     flex-grow: 1;
 }
 
+/* A card title is a link label, not a section heading, so it drops the h3
+   top margin that would otherwise pad the top of every card. The display face
+   is monospace and therefore wide: at the old 1.5em long titles ran to three
+   lines and drove the card height. */
 .card-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.15em;
+    line-height: 1.35;
+    margin: 0 0 8px;
     color: var(--heading);
 }
 
