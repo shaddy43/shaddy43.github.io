@@ -37,21 +37,21 @@
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Emotet/"
 
 - title: "Memory Patch Deobfuscation"
-  tags: ["Reverse Engineering", "Evasion"]
+  tags: ["Reverse Engineering", "Defense Evasion"]
   description: "The xloader AKA formbook, hides its core malicious functionality under the guise of encrypted core malicious functions that are patched at run-time in the memory during its exectution"
   image: "/Assets/ai_gen12.jpeg"
   meta: "24 Aug 2024 • 10 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Xloader4.3/Extracted_TTPs/Xloader_Memory_Patch/"
 
 - title: "Lagos Island Ntdll Unhooking"
-  tags: ["Evasion", "Reverse Engineering"]
+  tags: ["Defense Evasion", "Reverse Engineering", "Malware Development"]
   description: "This method loads Windows ntdll.dll module from disk into memory, and calls its exported functions directly, rendering user-mode hooking and API monitoring mechanisms ineffective"
   image: "/Assets/ai_gen11.jpg"
   meta: "24 Aug 2024 • 12 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Xloader4.3/Extracted_TTPs/Xloader_LagosIslandMethod/"
 
 - title: "Ghost in the system, Malware Defense Evasion"
-  tags: ["Evasion"]
+  tags: ["Defense Evasion", "Malware Development"]
   description: "A list of interesting Malware Defense Evasion techniques"
   image: "/Assets/ai_gen14.jpg"
   meta: "08 Aug 2024 • 6 minute read"
@@ -80,7 +80,7 @@
   link: "https://medium.com/@shaddy43/decrypting-the-mystery-of-medusalocker-7128795cf9f0"
 
 - title: "RevEnge! Reverse Engineering android apps to bypass SSL pinning for mobile app pen-testing"
-  tags: ["Mobile", "Reverse Engineering"]
+  tags: ["Mobile", "Pen-Testing", "Reverse Engineering"]
   description: "Bypass SSL pinning manually by patching the APK file for MITM proxy and API testing"
   image: "/Assets/ai_gen5.jpg"
   meta: "31 Oct 2023 • 5 minute read"
@@ -94,14 +94,14 @@
   link: "https://medium.com/@shaddy43/secrets-of-commercial-rats-nanocore-dissected-69e1213b34c3"
 
 - title: "RevEnge! Reverse engineering android apps to bypass root detection capabilities for mobile app-pentesting"
-  tags: ["Mobile", "Reverse Engineering"]
+  tags: ["Mobile", "Pen-Testing", "Reverse Engineering"]
   description: "Bypassing Root Detection by reverse engineering APK and patching code"
   image: "/Assets/ai_gen4.jpg"
   meta: "05 Nov 2022 • 6 minute read"
   link: "https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-root-detection-capabilities-for-mobile-e8466f0d3a7e"
 
 - title: "The epitome of evasion! A custom shellcode"
-  tags: ["Shellcode", "Evasion"]
+  tags: ["Shellcode", "Defense Evasion", "Malware Development"]
   description: "Crafting a custom position independent code (shellcode) to evade defenses"
   image: "/Assets/ai_gen3.jpg"
   meta: "09 Apr 2022 • 8 minute read"
@@ -109,7 +109,7 @@
   link: "https://medium.com/@shaddy43/the-epitome-of-evasion-a-custom-shellcode-c751a1a17e5b"
 
 - title: "Reverse Auth"
-  tags: ["Reverse Engineering", "Cracking"]
+  tags: ["Reverse Engineering", "CTF", "Cracking"]
   description: "Reversing Authenticaion. Completing famous bomb.exe, a reverse engineering exercise to reverse engineer and bypass authentication checks in one hour"
   image: "/Assets/ai_gen2.jpg"
   meta: "23 Mar 2022 • 7 minute read"
