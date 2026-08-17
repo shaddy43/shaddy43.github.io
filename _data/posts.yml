@@ -1,6 +1,7 @@
 # Blog posts and analysis reports, newest first.
 # To add a post, copy a block and fill in the fields. `ribbon` is optional.
 - title: "Autonomous Reverse Engineering: Evaluating AI with Interactive Disassembly"
+  tags: ["AI Agent", "Reverse Engineering", "Malware Analysis"]
   description: "Claude Code driving Ghidra over MCP across three binaries, a symbol-rich build, a stripped Ryuk, and a packed XLoader"
   image: "/Assets/ai-reversing.webp"
   meta: "01 Aug 2026 • 16 minute read"
@@ -8,48 +9,56 @@
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/AI-Assisted-Reversing/"
 
 - title: "From Alert to Answer: AI-Driven DFIR with Claude Code & Velociraptor"
+  tags: ["AI Agent", "DFIR", "Detection"]
   description: "How an AI coding agent became a digital-forensics operator, writing detection logic, running fleet-wide hunts, and triaging a live malware hit end to end"
   image: "/Assets/hero.webp"
   meta: "23 Jul 2026 • 10 minute read"
   link: "https://shaddy43.github.io/DetectionAndResponse/posts/from-alert-to-answer.html"
 
 - title: "BrowserSnatch: Detection & Threat Intelligence Wiki"
+  tags: ["Detection", "Infostealer"]
   description: "A community detection knowledge base for BrowserSnatch, an open-source browser data extraction tool"
   image: "/Assets/browsersnatch.jpg"
   meta: "17 Jul 2026 • 20 minute read"
   link: "https://github.com/shaddy43/BrowserSnatch/wiki"
 
 - title: "Velociraptor: The Ultimate Powerhouse for Swift and Precision Investigations"
+  tags: ["DFIR"]
   description: "A deep dive into an open-source DFIR tool and its flexibility"
   image: "/Assets/ai_gen13.jpg"
   meta: "18 Jan 2025 • 06 minute read"
   link: "https://medium.com/@shaddy43/velociraptor-the-ultimate-powerhouse-for-swift-and-precision-investigations-b9f7d85c5dfd"
 
 - title: "Emotet Malware Analysis"
+  tags: ["Malware Analysis", "Reverse Engineering"]
   description: "A detailed technical analysis report on Emotet Malware covering 3 stages from initial vbs dropper to stage 2 emotet dll and in-memory loaded module"
   image: "/Assets/emotet.jpg"
   meta: "28 Oct 2024 • 12 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Emotet/"
 
 - title: "Memory Patch Deobfuscation"
+  tags: ["Reverse Engineering", "Evasion"]
   description: "The xloader AKA formbook, hides its core malicious functionality under the guise of encrypted core malicious functions that are patched at run-time in the memory during its exectution"
   image: "/Assets/ai_gen12.jpeg"
   meta: "24 Aug 2024 • 10 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Xloader4.3/Extracted_TTPs/Xloader_Memory_Patch/"
 
 - title: "Lagos Island Ntdll Unhooking"
+  tags: ["Evasion", "Reverse Engineering"]
   description: "This method loads Windows ntdll.dll module from disk into memory, and calls its exported functions directly, rendering user-mode hooking and API monitoring mechanisms ineffective"
   image: "/Assets/ai_gen11.jpg"
   meta: "24 Aug 2024 • 12 minute read"
   link: "https://shaddy43.github.io/MalwareAnalysisSeries/Xloader4.3/Extracted_TTPs/Xloader_LagosIslandMethod/"
 
 - title: "Ghost in the system, Malware Defense Evasion"
+  tags: ["Evasion"]
   description: "A list of interesting Malware Defense Evasion techniques"
   image: "/Assets/ai_gen14.jpg"
   meta: "08 Aug 2024 • 6 minute read"
   link: "https://medium.com/@shaddy43/ghost-in-the-system-malware-defense-evasion-0587e726c921"
 
 - title: "Layers of Deception: Analyzing the Complex Stages of XLoader 4.3 Malware Evolution"
+  tags: ["Malware Analysis", "Reverse Engineering", "Infostealer"]
   description: "Technical Analysis of xloader4.3/formbook infostealer"
   image: "/Assets/xloader.jpg"
   meta: "24 Jan 2024 • 25 minute read"
@@ -57,36 +66,42 @@
   link: "https://medium.com/@shaddy43/layers-of-deception-analyzing-the-complex-stages-of-xloader-4-3-malware-evolution-2dcb550b98d9"
 
 - title: "From Infection to Encryption: Tracing the Impact of RYUK Ransomware"
+  tags: ["Malware Analysis", "Ransomware"]
   description: "Technical Analysis of dangerous multi-threading encrypter on which many of the modern ransomware are based on"
   image: "/Assets/ryuk.jpg"
   meta: "26 Nov 2023 • 10 minute read"
   link: "https://medium.com/@shaddy43/from-infection-to-encryption-tracing-the-impact-of-ryuk-ransomware-64bd8656781c"
 
 - title: "Decrypting the Mystery of MedusaLocker"
+  tags: ["Malware Analysis", "Ransomware"]
   description: "Technical Analysis of MedusaLocker Ransomware and its extracted TTPs"
   image: "/Assets/medusa.jpg"
   meta: "13 Nov 2023 • 9 minute read"
   link: "https://medium.com/@shaddy43/decrypting-the-mystery-of-medusalocker-7128795cf9f0"
 
 - title: "RevEnge! Reverse Engineering android apps to bypass SSL pinning for mobile app pen-testing"
+  tags: ["Mobile", "Reverse Engineering"]
   description: "Bypass SSL pinning manually by patching the APK file for MITM proxy and API testing"
   image: "/Assets/ai_gen5.jpg"
   meta: "31 Oct 2023 • 5 minute read"
   link: "https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-ssl-pinning-for-mobile-app-pen-testing-eeef2ce22682"
 
 - title: "Secrets of commercial RATs! NanoCore dissected"
+  tags: ["Malware Analysis", "RAT"]
   description: "Technical analysis of NanoCore RAT 1.2.2.0 malware and its extracted TTPs"
   image: "/Assets/nanocore.jpg"
   meta: "21 Sep 2023 • 14 minute read"
   link: "https://medium.com/@shaddy43/secrets-of-commercial-rats-nanocore-dissected-69e1213b34c3"
 
 - title: "RevEnge! Reverse engineering android apps to bypass root detection capabilities for mobile app-pentesting"
+  tags: ["Mobile", "Reverse Engineering"]
   description: "Bypassing Root Detection by reverse engineering APK and patching code"
   image: "/Assets/ai_gen4.jpg"
   meta: "05 Nov 2022 • 6 minute read"
   link: "https://medium.com/@shaddy43/revenge-reverse-engineering-android-apps-to-bypass-root-detection-capabilities-for-mobile-e8466f0d3a7e"
 
 - title: "The epitome of evasion! A custom shellcode"
+  tags: ["Shellcode", "Evasion"]
   description: "Crafting a custom position independent code (shellcode) to evade defenses"
   image: "/Assets/ai_gen3.jpg"
   meta: "09 Apr 2022 • 8 minute read"
@@ -94,12 +109,14 @@
   link: "https://medium.com/@shaddy43/the-epitome-of-evasion-a-custom-shellcode-c751a1a17e5b"
 
 - title: "Reverse Auth"
+  tags: ["Reverse Engineering", "Cracking"]
   description: "Reversing Authenticaion. Completing famous bomb.exe, a reverse engineering exercise to reverse engineer and bypass authentication checks in one hour"
   image: "/Assets/ai_gen2.jpg"
   meta: "23 Mar 2022 • 7 minute read"
   link: "https://medium.com/@shaddy43/reverse-authentication-how-i-diffused-infamous-bomb-exe-in-one-hour-52796cdac2e4"
 
 - title: "Cracked Haven"
+  tags: ["Cracking", "Reverse Engineering"]
   description: "Understand software cracking and its implications. This article explores the way software cracking works with a practical example of cracking Adobe Photoshop and manually adding backdoor"
   image: "/Assets/crackedhaven.jpg"
   meta: "12 Mar 2022 • 10 minute read"
@@ -107,6 +124,7 @@
   link: "https://medium.com/@shaddy43/cracked-haven-why-you-should-avoid-using-cracked-software-and-how-to-check-their-integrity-98a146efebb5"
 
 - title: "Analysis of a trojanized anydesk"
+  tags: ["Malware Analysis", "Infostealer"]
   description: "Technical analysis of a trojanized anydesk, delivering infostealer in anydesk campaign"
   image: "/Assets/ai_gen1.jpg"
   meta: "01 Mar 2022 • 10 minute read"

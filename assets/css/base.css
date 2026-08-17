@@ -31,6 +31,9 @@
     --link:        #0969da;
     --link-soft:   #ddf4ff;
     --btn:         #0969da;
+    --accent-ink:  #ffffff;
+    --accent-soft: #fdf2e2;
+    --accent-line: #f0d8ab;
     --live:        #1a7f37;
     --live-soft:   #dafbe1;
     --badge-neutral: #555c66;
@@ -67,6 +70,9 @@
         --link:        #58a6ff;
         --link-soft:   #12283f;
         --btn:         #1f6feb;
+        --accent-ink:  #0f141b;
+        --accent-soft: #2a1e08;
+        --accent-line: #4d3a12;
         --live:        #3fb950;
         --live-soft:   #12261a;
         --badge-neutral: #39424e;
@@ -96,6 +102,9 @@
     --link:        #58a6ff;
     --link-soft:   #12283f;
     --btn:         #1f6feb;
+    --accent-ink:  #0f141b;
+    --accent-soft: #2a1e08;
+    --accent-line: #4d3a12;
     --live:        #3fb950;
     --live-soft:   #12261a;
     --badge-neutral: #39424e;
