@@ -1,0 +1,15 @@
+{%- comment -%}
+Cache-busting stamp for local CSS/JS.
+
+GitHub Pages exposes the commit SHA as site.github.build_revision, so every
+deploy produces a new URL and browsers fetch the changed file instead of
+serving a stale copy. Without this a returning visitor can end up mixing a
+cached stylesheet with a freshly added script, which half-applies a change
+rather than failing outright. Local builds have no build_revision, so fall
+back to the build timestamp.
+{%- endcomment -%}
+{%- if site.github.build_revision -%}
+{{- site.github.build_revision -}}
+{%- else -%}
+{{- site.time | date: '%s' -}}
+{%- endif -%}
