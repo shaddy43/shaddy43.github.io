@@ -52,19 +52,33 @@ description: Threat Researcher · Detection & Response · Offensive Tooling
 
 <h2 id="posts">Recent Posts</h2>
 <div id="recent-posts">
+    <div class="filter-bar">
+        <input class="filter-search" type="search" placeholder="Search posts&hellip;" aria-label="Search posts">
+        <div class="filter-tags" role="group" aria-label="Filter posts by tag"></div>
+    </div>
     <div class="card-container">
         {% for post in site.data.posts %}
-        <a class="card" href="{{ post.link }}" target="_blank" rel="noopener">
+        {% capture searchstr %}{{ post.title }} {{ post.description }} {{ post.tags | join: ' ' }}{% endcapture %}
+        <a class="card" href="{{ post.link }}" target="_blank" rel="noopener"
+           data-tags="{{ post.tags | join: '|' | downcase }}"
+           data-tag-labels="{{ post.tags | join: '|' }}"
+           data-search="{{ searchstr | strip_newlines | downcase | escape }}">
             <img src="{{ post.image }}" alt="Cover image for {{ post.title }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
             <div class="card-content">
                 <h3 class="card-title">{{ post.title }}</h3>
                 <p class="card-description">{{ post.description }}</p>
                 <p class="card-meta">{{ post.meta }}</p>
+                {% if post.tags %}
+                <div class="card-tags">
+                    {% for t in post.tags %}<span class="card-tag">{{ t }}</span>{% endfor %}
+                </div>
+                {% endif %}
             </div>
             {% if post.ribbon %}<div class="card-ribbon">{{ post.ribbon }}</div>{% endif %}
         </a>
         {% endfor %}
     </div>
+    <p class="no-results" hidden>No posts match your filter.</p>
     <div class="pagination-controls" hidden>
         <button class="prev-btn">Previous</button>
         <span class="page-number"></span>
@@ -141,6 +155,7 @@ description: Threat Researcher · Detection & Response · Offensive Tooling
 </div>
 
 <script src="{{ '/assets/js/pagination.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/posts-filter.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/github-stats.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/ida-avatar.js' | relative_url }}"></script>
