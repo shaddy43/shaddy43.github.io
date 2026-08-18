@@ -275,10 +275,25 @@ a:hover {
     flex-direction: row;
 }
 
-.card img {
-    min-width: 30%;
-    max-width: 30%;
-    height: auto;
+/* The cover sits in a stretching slot with the image absolutely positioned
+   inside it, so the image contributes nothing to layout height. Left to itself
+   a square cover 232px wide claimed 232px of height while the text needed
+   about 150px, padding short cards with dead space. Card height is now set by
+   the text, and the cover crops to fill whatever that comes to. */
+.card-thumb {
+    position: relative;
+    flex: 0 0 30%;
+    width: 30%;
+    align-self: stretch;
+    overflow: hidden;
+    background: var(--bg-subtle);
+}
+
+.card-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -288,9 +303,11 @@ a:hover {
         flex-direction: column;
     }
 
-    .card img {
-        min-width: 100%;
-        max-width: 100%;
+    /* Stacked: the slot needs an explicit height because there is no longer a
+       sibling to stretch against. */
+    .card-thumb {
+        flex: 0 0 auto;
+        width: 100%;
         height: 180px;
     }
 }
