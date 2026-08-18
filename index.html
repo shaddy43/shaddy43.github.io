@@ -63,7 +63,7 @@ description: Threat Researcher · Detection & Response · Offensive Tooling
            data-tags="{{ post.tags | join: '|' | downcase }}"
            data-tag-labels="{{ post.tags | join: '|' }}"
            data-search="{{ searchstr | strip_newlines | downcase | escape }}">
-            <img src="{{ post.image }}" alt="Cover image for {{ post.title }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async">
+            <span class="card-thumb"><img src="{{ post.image }}" alt="Cover image for {{ post.title }}"{% if forloop.first %} loading="eager" fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async"></span>
             <div class="card-content">
                 <h3 class="card-title">{{ post.title }}</h3>
                 <p class="card-description">{{ post.description }}</p>
