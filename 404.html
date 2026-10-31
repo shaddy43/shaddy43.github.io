@@ -1,9 +1,16 @@
----
-layout: default
-title: Page not found
-permalink: /404.html
----
-
-<h1>404 — Page not found</h1>
-<p>The page you were looking for doesn't exist or has moved.</p>
-<p><a href="{{ '/' | relative_url }}">Back to the home page</a></p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved to shaddy43.com</title>
+<script>
+  var p = location.pathname;
+  if (/^\/DetectionAndResponse(\/|$)/i.test(p)) p = "/";
+  location.replace("https://shaddy43.com" + p + location.search + location.hash);
+</script>
+</head>
+<body>
+<p>This site has moved to <a href="https://shaddy43.com/">https://shaddy43.com</a>.</p>
+</body>
+</html>
